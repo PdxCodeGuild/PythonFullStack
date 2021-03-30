@@ -3,10 +3,10 @@
 
 
 
-🟢 = done
-🟡 = exists somewhere but is not put in place
-🟠 = needs heavy editing
-🔴 = needs to be created from scratch
+- 🟢 = done
+- 🟡 = exists somewhere but is not put in place
+- 🟠 = needs heavy editing
+- 🔴 = needs to be created from scratch
 
 
 
