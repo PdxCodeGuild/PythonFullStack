@@ -1,0 +1,94 @@
+
+.container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48pt;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+}
+h3 {
+    text-align: center;
+    color: black;
+    font-size: 36pt;
+    font-family: 'Brush Script MT', cursive;
+}
+
+h4 {
+    text-align: center;
+    color: black;
+    font-size: 36pt;
+    font-weight: bold;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.match_results {
+    text-align: center;
+    font-size: 24pt;
+    color: blue;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.user_details {
+    text-align: center;
+    font-size: 24pt;
+    color: green;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.computer_details {
+    text-align: center;
+    font-size: 24pt;
+    color:red;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.results {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.results div {
+    margin: 100px;
+    font-size: 24pt;
+}
+
+.user {
+    color: green;
+}
+
+.computer {
+    color: red;
+}
+
+.btn_img {
+    width: 200px;
+    height: 200px;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 32px;
+    background-color: white;
+    border: none;
+    box-shadow: 0 2px 2px black;
+    border-radius: 6px;
+}
+
+.rock {
+    background-image: url("../images/rock.png");
+    
+}
+
+.paper {
+    background-image: url("../images/paper.png");
+}
+
+.scissors {
+    background-image: url("../images/scissors.png");
+}

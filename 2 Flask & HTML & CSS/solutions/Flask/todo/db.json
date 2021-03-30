@@ -1,0 +1,24 @@
+{
+    "todos": [
+        {
+            "text": "Go for a walk",
+            "priority": "low"
+        },
+        {
+            "text": "Wash the car",
+            "priority": "low"
+        },
+        {
+            "text": "Buy groceries",
+            "priority": "medium"
+        },
+        {
+            "text": "Drink water",
+            "priority": "high"
+        },
+        {
+            "text": "Walk the dog",
+            "priority": "medium"
+        }
+    ]
+}

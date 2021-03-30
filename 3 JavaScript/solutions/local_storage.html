@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        function saveData(name, data) {
+            localStorage.setItem(name, JSON.stringify(data))
+        }
+        function loadData(name) {
+            return JSON.parse(localStorage.getItem(name))
+        }
+
+        let todos = [{
+            'todo': 'wash the car',
+            'priority': 'low',
+            'completed': false
+        },{
+            'todo': 'walk the dog',
+            'priority': 'medium',
+            'completed': true
+        }]
+        saveData('todos', todos)
+        todos = loadData('todos')
+
+    </script>
+</body>
+</html>

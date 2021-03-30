@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Blog</h1>
+    <div>Welcome {{user.username}}</div>
+    {% for post in posts %}
+    <div>
+        <h2>{{ post.title }} (id {{post.id}})</h2>
+        <div>{{ post.body }}</div>
+        <div>
+            {% if user in post.favorited_by.all %}
+            <span onclick="toggleFavorite(this, {{post.id}})">★</span>
+            {% else %}
+            <span onclick="toggleFavorite(this, {{post.id}})">☆</span>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+    <script>
+        function toggleFavorite(element, post_id) {
+            // console.log(element)
+            axios({
+                url: "{% url 'blog:toggle_favorite' %}",
+                method: 'get',
+                params: {
+                    post_id: post_id
+                }
+            }).then(response => {
+                console.log(response.data)
+                if (response.data == 'favorited') {
+                    element.innerText = '★'
+                } else {
+                    element.innerText = '☆'
+                }
+                // if (element.innerText == '★') {
+                //     element.innerText = '☆'
+                // } else {
+                //     element.innerText = '★'
+                // }
+            })
+        }
+    </script>
+</body>
+</html>

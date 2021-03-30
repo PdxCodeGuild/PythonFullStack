@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        #div_output_distance {
+            text-align:center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Unit Converter</h1>
+
+        <div class="row">
+            <div class="input-field col s6 m3">
+                <input id="input_distance" type="number" class="validate">
+                <label for="input_distance">Input Distance</label>
+            </div>
+            <div class="input-field col s6 m3">
+                <select id="select_input_units">
+                    <option value="m">Meters</option>
+                    <option value="ft">Feet</option>
+                    <option value="mi">Miles</option>
+                    <option value="km">Kilometers</option>
+                </select>
+                <label>Input Units</label>
+            </div>
+            <div class="input-field col s6 m3">
+                <select id="select_output_units">
+                    <option value="m">Meters</option>
+                    <option value="ft">Feet</option>
+                    <option value="mi">Miles</option>
+                    <option value="km">Kilometers</option>
+                </select>
+                <label>Output Units</label>
+            </div>
+            <div class="input-field col s6 m3">
+                <button id="btn_convert" class="btn">Convert</button>
+            </div>
+        </div>
+        <div id="div_output_distance" class="row">
+
+        </div>
+    </div>
+    <script>
+
+        // initialize the dropdown lists
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems, {});
+        });
+
+        let input_distance = document.querySelector('#input_distance')
+        let select_input_units = document.querySelector('#select_input_units')
+        let select_output_units = document.querySelector('#select_output_units')
+        let btn_convert = document.querySelector('#btn_convert')
+        let div_output_distance = document.querySelector('#div_output_distance')
+
+        btn_convert.addEventListener('click', function(evt) {
+            let distance = input_distance.value
+            distance = parseFloat(distance)
+            let input_units = select_input_units.value
+            let output_units = select_output_units.value
+
+            // console.log(distance)
+            // console.log(input_units)
+            // console.log(output_units)
+
+            let conversion_factors = {
+                'ft': 0.3048,
+                'mi': 1609.34,
+                'km': 1000,
+                'yd': 09.144,
+                'in': 0.0254,
+                'm': 1,
+            }
+
+            let distance_meters = distance * conversion_factors[input_units]
+            let distance_output = distance_meters / conversion_factors[output_units]
+
+            div_output_distance.innerText = distance_output + ' ' + output_units
+
+        })
+
+    </script>
+</body>
+
+</html>

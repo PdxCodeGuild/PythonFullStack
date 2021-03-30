@@ -1,0 +1,291 @@
+<!-- 
+Bee-owned and operated meadery
+✓ top navigation - site title, home, about, contact us, faq, order
+✓ slideshow with pictures of hives and bottles of mead
+✓ order form
+  - first name, last name (text inputs)
+  - address (text input)
+  - phone number
+  - email address
+  - which bottle of mead, quantity
+  - sign up for our newsletter - checkbox
+  - submit button, show modal verifying age with 'confirm' and 'cancel' buttons
+- store locations in a table
+✓ company bio
+- customer testimonials
+✓ slogan "happy bees and happy mead"
+- pricing guide
+- mechandise shop?
+- address, email, phone number - on footer - call/email on click
+ -->
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="company_home.css" />
+
+    <title>Meaderbee</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Meaderbee</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            About
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Meet the Bees</a></li>
+                            <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div class="container">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+                <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/carousel1.jpg" class="d-block w-100" alt="bees">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/carousel2.jpg" class="d-block w-100" alt="bees">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/carousel3.jpg" class="d-block w-100" alt="bees">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Order Form -->
+    <div class="container bbox">
+        <div class="row">
+            <h2 class="text-center">Order Form</h2>
+        </div>
+        <form class="row g-3">
+            <div class="col-md-6 col-lg-3">
+                <label for="first_name" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="first_name" placeholder="Jane">
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <label for="last_name" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="last_name" placeholder="Doe">
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="you@email.com">
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <label for="inputPassword4" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="inputPassword4" placeholder="555-555-5555">
+            </div>
+            <div class="col-md-12 col-lg-6">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="col-md-12 col-lg-6">
+                <label for="inputAddress2" class="form-label">Address 2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">State</label>
+                <select id="inputState" class="form-select">
+                    <option selected>Choose...</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="DC">District Of Columbia</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WA">Washington</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label for="inputZip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="inputZip">
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        Sign up for our newsletter
+                    </label>
+                </div>
+            </div>
+            <div class="col-12">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Confirm Your Age</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Please confirm that you are over 21 years of age.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Get Me Outta Here</button>
+                    <button type="button" class="btn btn-primary">Yes I'm Over 21</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <article class="container bbox">
+        <h3>Our Story</h3>
+        <p>That's life! That's why this is the last parade. Does anyone onboard have flight experience? the Honey
+            Industry is now in session. Would you excuse me? It's not over? I think this is gonna work. I'm hoping that,
+            after this is all over, you'll see how, by taking our honey, you not only take everything we have but
+            everything we are! The last thing we want to do is upset bees! Why not? More humans. You're monsters! "Mama,
+            Dada, honey." You pick it up. Bees don't smoke. It's just coffee. Wax monkey's always open. I'm not
+            attracted to spiders. See that? Do you ever get bored doing the same job every day? Hi, Jocks! I sense it.
+            We have Hivo, but it's a disease. Our only chance is if I do what I'd do, you copy me with the wings of the
+            plane! You're not funny! I can't see anything. Yogurt night? Not as much. Hold it right there! We have Hivo,
+            but it's a disease. You snap out of it! Roses! Dead from the neck up. I don't eat it! I don't know. You'll
+            regret this. What'd you say, Hal? I know who makes it! How much longer will this go on? No, but there are
+            other things bugging me in life. Bye, Vanessa.</p>
+        <blockquote>"<b>Bee</b> happy im<b>Mead</b>iately"</blockquote>
+        <p>Bears kill bees! This is a bit of a surprise to me. Benson and his no-account compadres. You snap out of it!
+            Yeah! Wait a minute! It is bee-approved. I guess he could have just gotten out of the way. You got a rain
+            advisory today, and as you all know, bees cannot fly in rain. Oould be daisies. Well, I'm sure this is very
+            disconcerting. I know. I was with a band called The Police. All the good jobs will be gone. We need to talk!
+            Why? Let's shake it up a little. Barry, these are cut flowers with no water. It's your only chance, bee!
+            It's just honey, Barry. They're scary, hairy and here live. Not taking sides! Where is the honey coming
+            from? Yeah. Makes an opening. Nice brooch. Pollen counting, stunt bee, pouring, stirrer, front desk, hair
+            removal... They're out of their minds. Are you...? I didn't know that. I'm right off the Turtle Pond! Star
+            Wars? See that? You see? Barry! Security will be tight. What was that? Sorry. Just a row of honey jars, as
+            far as the eye could see. I lost a toe ring there once.</p>
+    </article>
+
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col text-muted">56 Brewery Ave. San Carlos, CA 94070</div>
+                <div class="col text-muted">
+                    <a href="tel:+15555555555">555-555-5555</a>
+                </div>
+                <div class="col text-muted">
+                    <a href="emailto:bee@meaderbee.com">bee@meaderbee.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

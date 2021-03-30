@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number to Phrase</title>
+
+    <!-- Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Material Icons from Google -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="number_to_phrase.css" />
+
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h1>Number to Phrase</h1>
+                </div>
+                <div class="input-field col s12">
+                    <textarea id="textarea1" v-model="input_number" v-on:input="convertNumber" class="materialize-textarea">45</textarea>
+                    <label for="textarea1">Enter a number</label>
+                </div>
+                <div class="col s12 output">
+                    <h3>{{ output_phrase }}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Page JS -->
+    <script src="number_to_phrase.js"></script>
+</body>
+
+</html>

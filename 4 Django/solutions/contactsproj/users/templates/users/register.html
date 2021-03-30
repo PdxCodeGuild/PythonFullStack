@@ -1,0 +1,86 @@
+{% extends 'contacts/base.html' %}
+
+{% block content %}
+
+<h1>Register</h1>
+{% if message %}
+<div id="div_alert" class="alert alert-warning" role="alert">
+    {{ message }}
+</div>
+{% endif %}
+<div id="div_alert" class="alert alert-warning" role="alert" style="display:none">
+</div>
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="input_username" class="form-label">Username</label>
+        <input type="text" name="username" class="form-control" id="input_username" required>
+    </div>
+    <div class="mb-3">
+        <label for="input_email" class="form-label">Email address</label>
+        <input type="email" name="email" class="form-control" id="input_email" aria-describedby="emailHelp" required>
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+        <label for="input_password" class="form-label">Password</label>
+        <input type="password" name="password" class="form-control" id="input_password" required>
+    </div>
+    <div class="mb-3">
+        <label for="input_retype_password" class="form-label">Retype Password</label>
+        <input type="password" class="form-control" id="input_retype_password" required>
+    </div>
+    <button id="btn_submit" type="submit" class="btn btn-primary">Register</button>
+</form>
+<div>
+    <span>Already have an account? <a href="{% url 'users:login' %}">Login</a></span>
+</div>
+
+
+<script type="text/javascript">
+    // get the html elements out of the page
+    let input_password = document.querySelector('#input_password')
+    let input_retype_password = document.querySelector('#input_retype_password')
+    let btn_submit = document.querySelector('#btn_submit')
+    let div_alert = document.querySelector('#div_alert')
+
+    // when the user tries to submit the form
+    btn_submit.addEventListener('click', function(event) {
+        // check if the two passwords match
+        if (input_password.value != input_retype_password.value) {
+            // if they don't, show an alert and set the border color
+            div_alert.innerText = 'The passwords you entered do not match'
+            div_alert.style.display = ''
+            input_password.style.border = '1px solid red'
+            input_retype_password.style.border = '1px solid red'
+            event.preventDefault() // stop the form from being submitted
+        } else if (input_password.value.length < 10) {
+            // if the password is too short
+            div_alert.innerText = 'The password must be 10 characters or more'
+            div_alert.style.display = ''
+            input_password.style.border = '1px solid red'
+            input_retype_password.style.border = '1px solid red'
+            event.preventDefault() // stop the form from being submitted
+        }
+    })
+
+    // whenever the user types in the password input, this event is triggered
+    input_password.addEventListener('input', function() {
+        // figure out the color from the password length
+        let color = ''
+        let pw_length = input_password.value.length
+        if (pw_length < 3) {
+            color = 'red'
+        } else if (pw_length < 5) {
+            color = 'orange'
+        } else if (pw_length < 7) {
+            color = 'yellow'
+        } else {
+            color = 'green'
+        }
+        // set the border color to that password
+        input_password.style.border = '1px solid ' + color
+    })
+
+</script>
+
+{% endblock %}

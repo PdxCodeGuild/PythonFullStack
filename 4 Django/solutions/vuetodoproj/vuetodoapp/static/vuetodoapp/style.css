@@ -1,0 +1,22 @@
+h1 {
+    font-family: 'Rubik', sans-serif; 
+    font-weight: bold;
+}
+
+button {
+    font-family: 'Merriweather', serif;
+
+}
+
+.accordion-text {
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: rgba(229, 249, 250, 0.363);
+}
+
+
+.page-format{
+    margin-bottom: 500px;
+}

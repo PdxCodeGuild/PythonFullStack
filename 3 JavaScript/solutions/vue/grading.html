@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="number" v-model="number_grade" v-on:keypress.enter="calculateGrade"/>
+        <!-- <div>{{typeof number_grade}}</div> -->
+        <button v-on:click="calculateGrade">Calculate Grade</button>
+        <div>{{letter_grade}}</div>
+    </div>
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                number_grade: '5',
+                letter_grade: ''
+            },
+            methods: {
+                calculateGrade: function() {
+                    let grade = parseInt(this.number_grade)
+                    if (grade >= 90) {
+                        this.letter_grade = 'A'
+                    } else if (grade >= 80) {
+                        this.letter_grade = 'B'
+                    } else if (grade >= 70) {
+                        this.letter_grade = 'C'
+                    } else if (grade >= 60) {
+                        this.letter_grade = 'D'
+                    } else {
+                        this.letter_grade = 'F'
+                    }
+                }
+            }
+        })
+    </script>    
+</body>
+</html>

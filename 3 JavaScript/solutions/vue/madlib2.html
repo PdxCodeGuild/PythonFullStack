@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <table>
+            <tbody>
+                <tr v-for="word in madlib.words">
+                    <td><label>{{word.type}}</label></td>
+                    <td><input type="text" v-model="word.user_entry"/></td>
+                </tr>
+            </tbody>
+        </table>
+        <button v-on:click="showMadLib">Show Mad Lib</button>
+        <pre>{{madlib_output}}</pre>
+        <pre>{{JSON.stringify(madlib, null, 2)}}</pre>
+    </div>
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                madlib_output: '',
+                madlib: {
+                    words: [{
+                        type: 'Noun',
+                        variable_name: 'NOUN1',
+                        user_entry: ''
+                    },{
+                        type: 'Plural Noun',
+                        variable_name: 'PLURAL_NOUN',
+                        user_entry: ''
+
+                    },{
+                        type: 'Noun',
+                        variable_name: 'NOUN2',
+                        user_entry: ''
+                    },{
+                        type: 'Place',
+                        variable_name: 'PLACE',
+                        user_entry: ''
+                    },{
+                        type: 'Adjective',
+                        variable_name: 'ADJECTIVE',
+                        user_entry: ''
+                    },{
+                        type: 'Noun',
+                        variable_name: 'NOUN3',
+                        user_entry: ''
+                    }],
+                    template: `Be kind to your **NOUN1**-footed **PLURAL_NOUN**
+For a duck may be somebody's **NOUN2**,
+Be kind to your **PLURAL_NOUN** in **PLACE**
+Where the weather is always **ADJECTIVE**.
+
+You may think that this is the **NOUN3**,
+Well it is.`
+                }
+            },
+            methods: {
+                showMadLib: function() {
+                    let output = this.madlib.template
+                    for (let i=0; i<this.madlib.words.length; ++i) {
+                        let text_to_find = '**' + this.madlib.words[i].variable_name + '**'
+                        let text_to_replace = this.madlib.words[i].user_entry
+                        output = output.replaceAll(text_to_find, text_to_replace)
+                    }
+                    this.madlib_output = output
+                }
+            }
+        })
+    </script>
+</body>
+</html>

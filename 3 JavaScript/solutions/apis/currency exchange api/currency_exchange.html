@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="number" v-model="input_amount"/>
+        <select v-model="input_currency">
+            <option v-for="currency in currencies" v-bind:value="currency.code">{{ currency.country }} ({{ currency.code }})</option>
+        </select>
+        <select v-model="output_currency">
+            <option v-for="currency in currencies" v-bind:value="currency.code">{{ currency.country }} ({{ currency.code }})</option>
+        </select>
+        <button v-on:click="getExchangedValue">Go</button>
+        <div>{{input_amount}} {{input_currency}} = {{ output_amount }} {{output_currency}}</div>
+    </div>
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- Axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+    <!-- Page JS -->
+    <script src="currency_exchange.js"></script>
+</body>
+</html>

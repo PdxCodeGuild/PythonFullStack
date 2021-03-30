@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Todo</h1>
+    <form action="/addtodo/" method="post">
+        <input type="text" name="text"/>
+        <select name="priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+        <button type="submit">add</button>
+    </form>
+    <ul>
+        {% for todo in todos %}
+        <li>{{ todo.text }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

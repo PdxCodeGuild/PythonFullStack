@@ -1,0 +1,31 @@
+{% extends 'contacts/base.html' %}
+
+{% block content %}
+
+<h1>Login</h1>
+
+{% if message %}
+<div id="div_alert" class="alert alert-warning" role="alert">
+    {{ message }}
+</div>
+{% endif %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="input_username" class="form-label">Username</label>
+        <input type="text" name="username" class="form-control" id="input_username" required>
+    </div>
+    <div class="mb-3">
+        <label for="input_password" class="form-label">Password</label>
+        <input type="password" name="password" class="form-control" id="input_password" required>
+    </div>
+    <button id="btn_submit" type="submit" class="btn btn-primary">Login</button>
+</form>
+<div>
+    <span>Need to make an account? <a href="{% url 'users:register' %}">Register</a></span>
+</div>
+
+
+
+{% endblock %}

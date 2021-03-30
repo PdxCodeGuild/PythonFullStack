@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book API</title>
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="app">
+        <div class="container">
+            <div class="row">
+                <div class="input-field col s10">
+                    <input id="input_search" v-model="searchQuery" type="text" class="validate" v-on:keypress.enter="getBooks">
+                    <label for="input_search">Search</label>
+                </div>
+                <div class="input-field col s2">
+                    <a class="waves-effect waves-light btn" v-on:click="getBooks">Search</a>
+                </div>
+            </div>
+            <div class="row" v-show="docs.length > 0">
+                <div class="col s12">
+                    <ul class="pagination">
+                        <li v-bind:class="{disabled: current_page == 1}" class="waves-effect"><a href="#!" v-on:click="previousPage"><i class="material-icons">chevron_left</i></a></li>
+                        <li v-bind:class="{active: page == current_page}" v-on:click="setPage(page)" v-for="page in num_pages"><a href="#!">{{ page }}</a></li>
+                        <!-- <li class="waves-effect"><a href="#!">2</a></li>
+                        <li class="waves-effect"><a href="#!">3</a></li>
+                        <li class="waves-effect"><a href="#!">4</a></li>
+                        <li class="waves-effect"><a href="#!">5</a></li> -->
+                        <li v-bind:class="{disabled: current_page == num_pages}" class="waves-effect"><a href="#!" v-on:click="nextPage"><i class="material-icons">chevron_right</i></a></li>
+                      </ul>
+                </div>
+            </div>
+            <div class="row" v-show="docs.length > 0">
+                <div class="col s12">
+                    <ul class="collapsible">
+                        <li v-for="doc in docs">
+                            <div class="collapsible-header">{{doc.title}} by {{doc.author}}</div>
+                            <div class="collapsible-body">
+                                <img v-bind:src="doc.cover_url" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Vue JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- Axios JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous"></script>
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Page JS -->
+    <script src="book_api.js"></script>
+</body>
+
+</html>

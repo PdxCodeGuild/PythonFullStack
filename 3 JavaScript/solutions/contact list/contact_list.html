@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="contact_list.css"/>
+    <title>Contact List</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1>Contact List</h1>
+        <div class="row">
+            <div class="col-sm-12 col-md-3">
+                <label for="input_name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="input_name" placeholder="Joanne Doe" value="Brian Barber">
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <label for="input_email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="input_email" placeholder="jane@gmail.com" value="brain@gmail.com">
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <label for="input_dob" class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" id="input_dob" value="2000-01-01">
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <label class="form-label">&nbsp;</label><br/>
+                <button id="btn_add" class="btn btn-primary w-100">Add</button>
+            </div>
+        </div>
+        <div id="div_alert" class="alert alert-warning" role="alert" style="display:none;">
+            Please fill out all input  fields
+        </div>
+        <table class="table">
+            <tbody id="table_contacts">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Date of Birth</th>
+                    <th></th>
+                </tr>
+                <!-- <tr>
+                    <td>Wendy Carson</td>
+                    <td>wendy@gmail.com</td>
+                    <td>5/6/1980</td>
+                    <td><span class="btn btn-danger">✕</span></td>
+                </tr>
+                <tr>
+                    <td>Alyssa Lyons</td>
+                    <td>alyssa@gmail.com</td>
+                    <td>6/12/1984</td>
+                    <td><span class="btn btn-danger">✕</span></td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="contact_list.js"></script>
+  </body>
+</html>

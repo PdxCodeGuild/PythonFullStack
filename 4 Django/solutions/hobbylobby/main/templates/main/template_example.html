@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'main/index.css' %}"/>
+    <script src="{% static 'main/index.js' %}"></script>
+    <style type="text/css">
+        .colors {
+            display:flex;
+            flex-direction:row;
+            justify-content:space-between;
+        }
+        .colors div {
+            /* THIS IS BAD PRACTICE */
+            color: {{ text_color }};
+            padding:20px;
+        }
+    </style>
+    <script>
+        // **THIS IS BAD PRACTICE**
+        let letters = [
+            {% for char in user.first_name %}
+            '{{char}}',
+            {% endfor %}
+        ]
+        console.log(letters)
+        let age = {{ user.age }}
+        age += 1
+        console.log('next year the user will be ' + age)
+    </script>
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    <div>Welcome back {{ user.first_name }} {{ user.last_name }}</div>
+    <h3>Colors</h3>
+    <div class="colors">
+        {% for color in paint_colors %}
+        <div style="background-color:{{ color }}">{{ forloop.counter }}) {{ color | title }}</div>
+        {% endfor %}
+    </div>
+    {% if user.age < 10 %}
+    <div>Toys!</div>
+    {% elif user.age < 30 %}
+    <div>Arts & Crafts</div>
+    {% else %}
+    <div>Scrapbooking</div>
+    {% endif %}
+    <img src="{% static 'main/bee.jpg' %}"/>
+</body>
+</html>

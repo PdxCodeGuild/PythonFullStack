@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="input_elements.css"/>
+</head>
+<body>
+    
+    
+    <h3>Input type="text"</h3>
+    <input id="input_text" type="text" value="my text" placeholder="enter text here"/>
+    <button id="btn_show_text">show value</button>
+    <span id="span_output_text"></span>
+
+    <h3>Input type="password"</h3>
+    <input id="input_password" type="password"/>
+    <button id="btn_show_password">show value</button>
+    <span id="span_output_password"></span>
+
+    <h3>Input type="number"</h3>
+    <input id="input_number" type="number" min="0" max="100" value="50"/>
+    <button id="btn_show_number">show value</button>
+    <span id="span_output_number"></span>
+
+    <h3>Input type="color"</h3>
+    <input id="input_color" type="color"/>
+    <button id="btn_show_color">show value</button>
+    <span id="span_output_color"></span>
+
+    <h3>Input type="checkbox"</h3>
+    <input id="input_checkbox" type="checkbox" checked/>
+    <label for="input_checkbox">I agree to the terms and conditions</label>
+    <button id="btn_show_checkbox">show value</button>
+    <span id="span_output_checkbox"></span>
+    
+    
+    <h3>Input type="range"</h3>
+    <input id="input_range" min="0" max="1000000" type="range">
+    <span id="span_output_range"></span>
+    
+    <h3>Text Area</h3>
+    <textarea id="textarea_text" placeholder="Enter some text" rows="10" col="30">Test abc 123</textarea>
+    <button id="btn_show_textarea">show value</button>
+    <span id="span_output_textarea"></span>
+    
+    <h3>Input type="radio"</h3>
+    <ul>
+        <li>
+            <input id="radio_apples" type="radio" name="fruits" value="apples">
+            <label for="radio_apples">Apples</label>
+        </li>
+        <li>
+            <input id="radio_bananas" type="radio" name="fruits" value="bananas" checked>
+            <label for="radio_bananas">Bananas</label>
+        </li>
+        <li>
+            <input id="radio_pears" type="radio" name="fruits" value="pears">
+            <label for="radio_pears">Pears</label>
+        </li>
+    </ul>
+    <button id="btn_show_radio">show value</button>
+    <span id="span_output_radio"></span>
+
+    <h3>Select</h3>
+    <select id="select_fruits">
+        <option value="" selected disabled>Select a fruit</option>
+        <option value="apples" >Apples</option>
+        <option value="bananas">Bananas</option>
+        <option value="pears">Pears</option>
+    </select>
+    <button id="btn_show_select">show value</button>
+    <span id="span_output_select"></span>
+
+
+    <hr/>
+    <!-- <button>click</button> -->
+    <span id="btn_click" class="btn">click</span>
+
+    <!-- Script -->
+    <script src="utilities.js"></script>
+    <script type="text/javascript" src="input_elements.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+{% extends 'contacts/base.html' %}
+
+{% block content %}
+<h1>Create Contact</h1>
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="input_first_name" class="form-label">First Name</label>
+        <input type="text" name="first_name" class="form-control" id="input_first_name" required>
+    </div>
+    <div class="mb-3">
+        <label for="input_last_name" class="form-label">Last Name</label>
+        <input type="text" name="last_name" class="form-control" id="input_last_name" required>
+    </div>
+    <div class="mb-3">
+        <label for="input_email" class="form-label">Email address</label>
+        <input type="email" name="email" class="form-control" id="input_email" required>
+    </div>
+    <div class="mb-3">
+        <label for="input_image" class="form-label">Image</label>
+        <input type="file" name="image" class="form-control" id="input_image" accept="image/*">
+    </div>
+    <div class="mb-3">
+        <label for="input_birthday" class="form-label">Birthday</label>
+        <input type="date" name="birthday" class="form-control" id="input_birthday" required>
+    </div>
+    <div class="mb-3">
+        <label for="input_type" class="form-label">type</label>
+        <select name="type_id" class="form-control" id="input_type" required>
+            <option selected disabled value="">Select a type</option>
+            {% for type in types %}
+            <option value="{{type.id}}">{{type.name}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <button id="btn_submit" type="submit" class="btn btn-primary">Create Contact</button>
+</form>
+{% endblock %}

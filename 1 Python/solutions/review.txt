@@ -1,0 +1,55 @@
+
+immutable types - None, int, float, string, tuple
+mutable types - list, dictionary, set
+
+types
+    none
+    boolean
+    string
+    int
+    float
+    list
+    dictionary
+    range
+operators
+    =
+    +, -, *, /, //, **, %
+    +=, -=, *=, /=, //=, **=, %=
+    ==, !=, <, <=, >, >=
+    and, or, not
+    in
+    is
+    del
+keywords
+    if, elif, else
+    for, while
+    break, continue
+    return
+    # (comment)
+built-in functions
+    input
+    print
+    len
+    ord, chr
+    abs
+    int, str, list
+string methods
+    count
+    startswith, endswith
+    split, join
+    lower, upper, title, capitalize
+    strip
+    replace
+    isdigit
+list methods
+    append
+    insert
+    pop
+    remove
+    reverse
+    sort
+modules
+    random
+        randint
+        choice
+    string

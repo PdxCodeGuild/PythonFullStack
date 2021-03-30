@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Varela+Round&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/rps.css" />
+  <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+  <div id="app">
+    <h1>Rock Paper Scissors</h1>
+    <h3>Choose your weapon!</h3>
+    <!-- The three pictures -->
+    <div class="container">
+      <button v-on:click="clickedButton('rock')" class="rock btn_img">
+      </button>
+      <button v-on:click="clickedButton('paper')" class="paper btn_img">
+      </button>
+      <button v-on:click="clickedButton('scissors')" class="scissors btn_img">
+      </button>
+    </div>
+    <!-- Display results -->
+    <h4>Results</h4>
+    <div class="match_results" v-html="match_results">
+    </div>
+    <div class="user_details" v-html="user_details"></div>
+    <div class="computer_details" v-html="computer_details"></div>
+    <div class="results">
+      <div class="user">Your Score: {{ user_score }}</div>
+      <div class="computer">Computer's Score: {{ computer_score }}</div>
+    </div>
+  </div>
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="javascript/rps.js"></script>
+</body>
+
+</html>

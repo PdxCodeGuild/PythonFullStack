@@ -1,0 +1,11 @@
+
+
+#div_cipher_output, #div_cipher_decrypt {
+    padding:8px;
+    margin-top:20px;
+    border-radius:6px;
+}
+
+#btn_encrypt {
+    width:100%;
+}

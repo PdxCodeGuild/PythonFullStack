@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="message"/>
+        <input type="text" v-bind:placeholder="message"/>
+        <img v-bind:src="image_url"/>
+        <div>{{message}}</div>
+    </div>
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                message: 'hello world!',
+                image_url: 'https://placekitten.com/g/100/100'
+            }
+        })
+    </script>
+</body>
+</html>

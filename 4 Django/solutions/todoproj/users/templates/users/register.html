@@ -1,0 +1,19 @@
+{% extends 'todoapp/base.html' %}
+
+{% block content %}
+    <h1>Register</h1>
+    {% if message %}
+    <div>{{message}}</div>
+    {% endif %}
+    <form action="{% url 'users:register_user' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="username"/><br/>
+        <input type="email" name="email" placeholder="email"/><br/>
+        <input type="password" name="password" placeholder="password"/><br/>
+        <button type="submit">Register</button>
+    </form>
+    <div>
+        Already have an account?
+        <a href="{% url 'users:login_page' %}">Login</a>
+    </div>
+{% endblock %}

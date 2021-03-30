@@ -1,0 +1,38 @@
+
+
+h1 {
+    color:red;
+    background-color: lightblue;
+    padding:20px;
+    border: 1px solid black;
+}
+h2 {
+    margin-bottom: 40px;
+    color:blue;
+}
+p {
+    border: 1px solid lightgrey;
+    padding:10px;
+}
+img {
+    margin-right:40px;
+}
+body {
+    padding: 20px;
+}
+#title {
+    color: rgb(152, 121, 182);
+    text-align: center;
+
+    font-family: 'Oswald', sans-serif;
+    background-image: url('/images/kitten.jpg');
+    background-position:center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.table-row {
+    font-size:40px;
+}
+.header-row {
+    color:blue;
+}

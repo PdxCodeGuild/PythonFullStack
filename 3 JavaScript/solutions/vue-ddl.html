@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <select v-model="selected_fruit">
+                <option v-for="(fruit, index) in fruits" v-bind:value="index">
+                    {{ fruit | capitalize }}
+                </option>
+            </select>
+            <span>Selected Fruit: {{selected_fruit}}</span>
+        </div>
+        <div>
+            <div v-for="(fruit, index) in fruits">
+                <input v-bind:id="'fruit_radio'+index" type="radio" name="fruit" v-model="selected_fruit" v-bind:value="fruit">
+                <label v-bind:for="'fruit_radio'+index">{{fruit}}</label>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                fruits: ['apples', 'bananas', 'pears', 'kiwis', 'grapes'],
+                selected_fruit: ''
+            },
+            // https://vuejs.org/v2/guide/filters.html
+            filters: {
+                capitalize: function (value) {
+                    if (!value) return ''
+                    value = value.toString()
+                    return value.charAt(0).toUpperCase() + value.slice(1)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

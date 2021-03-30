@@ -1,0 +1,26 @@
+
+
+.btn {
+    border: 1px solid black;
+    background-color:grey;
+    color:white;
+    transition: all 200ms;
+    padding:4px;
+    cursor:pointer;
+    user-select:none;
+}
+.btn:hover {
+    box-shadow: 1px 1px 3px black;
+    background-color:white;
+    color:black;
+}
+
+textarea {
+    width:100%;
+    resize:none;
+}
+
+ul {
+    list-style:none;
+    padding-left:0;
+}

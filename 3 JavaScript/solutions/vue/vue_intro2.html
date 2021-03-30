@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="name"/>
+        <span>{{name}}</span>
+        <hr/>
+        <select v-model="color">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+        </select>
+        <span>{{color}}</span>
+        <hr/>
+        <button v-on:click="sayHello">click</button>
+        <div>{{output_message}}</div>
+    </div>
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                name: 'bob',
+                color: 'red',
+                output_message: ''
+            },
+            methods: {
+                sayHello: function() {
+                    // alert('Hello ' + this.name)
+                    this.output_message = 'Hello ' + this.name
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

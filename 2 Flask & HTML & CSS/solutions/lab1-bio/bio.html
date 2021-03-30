@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darth Vader - Lord of the Sith</title>
+    <style>
+        @font-face {
+            font-family: 'DeathStar';
+            src: url('DeathStar-VmWB.ttf') format('truetype');
+        }
+        h1 {
+            font-family: "DeathStar";
+            font-size:40px;
+            margin: 0;
+            padding: 26px 0;
+        }
+        body {
+            background-image: url('death_star.jpeg');
+            background-position: top center;
+            color: goldenrod;
+            margin: 0;
+        }
+        main {
+            background-color: rgba(0, 0, 0, 0.8);
+            max-width:600px;
+            margin: 0 auto;
+            padding:20px;
+            /* border-color:white; */
+            border-left: 0.5px solid dimgrey;
+            border-right: 0.5px solid dimgrey;
+        }
+        header {
+            background-image: linear-gradient(#2611AD, black);
+            height:60px;
+            font-size:32px;
+            display:flex;
+            flex-direction:row;
+            justify-content:center;
+            align-items:center;
+        }
+        header > div {
+            margin: 0 10px;
+        }
+        header > div:hover {
+            color:white;
+            cursor:pointer;
+            user-select:none;
+        }
+        .title_photo {
+            display:flex;
+            flex-direction:row;
+            justify-content:space-between;
+        }
+        .title_photo > img {
+            border: 1px solid dimgrey;
+            width:100px;
+        }
+        .timeline {
+            list-style: '⭐';
+            /* list-style-image: url('death-star-icon.png'); */
+        }
+        a {
+            text-decoration: none;
+        }
+        a:visited {
+            color: #2611AD;
+            
+        }
+        #box {
+            background-color:red;
+            width:400px;
+            height:100px;
+            position:fixed;
+            left: 10px;
+            bottom: 10px;
+            z-index: 10;
+        }
+        .timeline_photo {
+            display:flex;
+            flex-direction:row;
+            justify-content:space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+
+    </div>
+    <header>
+        <div>Disney.com</div>
+        <div>Upcoming Movies!</div>
+        <div>Ongoing Lawsuits!</div>
+        <div>Disney Plus!</div>
+    </header>
+    <main>
+        <div class="title_photo">
+            <h1>Darth Vader</h1>
+            <img src="Darth_Vader.jpg"/>
+        </div>
+        <p>Born of the lovely lava shores on the planet Mustafar, remade by Darth Sidious <a href="https://starwars.fandom.com/wiki/Anakin_Skywalker" target="_blank">Read More on Wookiepedia</a></p>
+        
+        <div class="timeline_photo">
+            <ul class="timeline">
+                <li>41.9 bby Born on Tatooine</li>
+                <li>?? bby had some kids</li>
+                <li>?? bby became Darth Vader</li>
+                <li>0 bby Died at the Battle of Yavin</li>
+            </ul>
+            <img src="Darth_Vader.jpg"/>
+        </div>
+        <p>Lucas ipsum dolor sit amet dagobah skywalker bothan jabba hutt ackbar wedge alderaan organa kessel. Obi-wan
+            organa tatooine coruscant kenobi anakin dooku chewbacca ben. Kessel solo bothan naboo anakin grievous. Organa
+            greedo endor wedge yavin. Fisto ventress solo owen yavin lobot ponda dagobah moff. Leia moff tatooine darth
+            grievous organa mara hutt. Skywalker grievous kit kit kessel jango sidious darth. Anakin mandalorians qui-gonn
+            coruscant. Hutt r2-d2 calamari dooku anakin. Mothma yoda binks han fett kit palpatine c-3po.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/un8FAjXWOBY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>Baba leia r2-d2 owen calamari mon organa. Binks mace jabba darth mara vader kenobi vader skywalker. Gamorrean
+            windu solo jango thrawn jabba sith solo c-3po. Gamorrean yoda amidala organa maul calrissian hutt. Dantooine
+            mustafar darth kit twi'lek. Alderaan wedge aayla solo jabba windu. Hutt tatooine mace ahsoka. Wookiee grievous
+            padmé moff padmé hutt secura zabrak binks. Padmé han jinn anakin jabba jar. Mothma jango darth darth. Calamari
+            greedo fett luuke hutt wedge. Dagobah c-3p0 yoda wookiee antilles.</p>
+        <p>Leia solo dagobah hutt secura jade organa naboo twi'lek. Tusken raider ahsoka leia moff. Padmé thrawn kessel
+            wampa utapau. Amidala leia hutt yoda padmé darth antilles moff. Luuke utapau ben c-3po kit. Grievous organa boba
+            skywalker binks. Lando droid moff wedge kenobi moff padmé. Wicket luuke kessel fett. Solo moff naboo mandalore.
+            Maul hoth padmé skywalker ahsoka. Skywalker padmé watto yavin wicket. Thrawn bothan solo hutt moff mon amidala
+            calamari calrissian. Utapau solo organa yoda luke. Hutt wookiee gonk han anakin leia.</p>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

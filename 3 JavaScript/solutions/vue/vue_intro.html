@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <style>
+        .special {
+            background-color:magenta;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myapp">
+        <span>{{ message }}</span>
+        <img v-bind:src="image_url"/>
+        <div v-if="seen">Hello!</div>
+        <ul>
+            <li v-for="color in colors" v-bind:style="{color:color}" v-bind:class="{special: seen}">{{ color }}</li>
+        </ul>
+    </div>
+    <script>
+        let app = new Vue({
+            el: '#myapp',
+            data: {
+                message: 'apples!',
+                image_url: 'https://placekitten.com/200/200',
+                seen: false,
+                colors: ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+            }
+        })
+
+        setInterval(function() {
+            // app.message += '!!!!!'
+            app.message = ['apples', 'bananas', 'pears'][Math.floor(Math.random()*3)]
+            app.image_url = `https://placekitten.com/${Math.floor(100+Math.random()*100)}/${Math.floor(100+Math.random()*100)}`
+            app.seen = !app.seen
+
+            for (let i=0; i<app.colors.length; ++i) {
+                // let j = 
+            }
+
+        }, 3000)
+        
+    </script>
+</body>
+
+</html>

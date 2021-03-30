@@ -1,0 +1,73 @@
+{% extends 'contactapp/base.html'%}
+
+{% block content %}
+  <h1>Contacts</h1>
+  <form action="{% url 'contactapp:delete_contact_form' %}" method="post">
+    {% csrf_token %}
+    <select name="contact_id">
+      {% for contact in contacts %}
+      <option value="{{contact.id}}">{{ contact }}</option>
+      {% endfor %}
+    </select>
+    <button type="submit" class="btn btn-danger">Delete (form)</button>
+  </form>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>First</th>
+        <th>Middle</th>
+        <th>Last</th>
+        <th>Email</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for contact in contacts %}
+      <tr>
+        <td>{{contact.first_name}}</td>
+        <td>{{contact.middle_name}}</td>
+        <td>{{contact.last_name}}</td>
+        <td>{{contact.email}}</td>
+        <td><a href="{% url 'contactapp:detail' contact.id %}"   class="btn btn-primary">Details</a></td>
+        <td>
+          <a href="{% url 'contactapp:delete_contact' contact.id %}" class="btn btn-danger">Delete (link)</a>
+          <form action="{% url 'contactapp:delete_contact_form' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="contact_id" value="{{contact.id}}"/>
+            <button type="submit" class="btn btn-danger">Delete (form)</button>
+          </form>
+        </td>
+        <td>
+          <a href="{% url 'contactapp:archive_contact' contact.id %}" class="btn btn-warning">Archive</a>
+        </td>
+
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>First</th>
+        <th>Middle</th>
+        <th>Last</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for contact in archived_contacts %}
+      <tr>
+        <td class="text-muted">{{contact.first_name}}</td>
+        <td class="text-muted">{{contact.middle_name}}</td>
+        <td class="text-muted">{{contact.last_name}}</td>
+        <td class="text-muted">{{contact.email}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <a href="{% url 'contactapp:create'%}" class="btn btn-primary">Add</a>
+{% endblock %}

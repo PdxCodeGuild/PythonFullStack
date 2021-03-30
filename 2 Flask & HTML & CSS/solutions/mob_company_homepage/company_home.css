@@ -1,0 +1,39 @@
+
+
+
+body {
+    background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('images/background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.carousel-caption {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 1px 1px 4px black;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+}
+
+
+.bbox {
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    /* background-color: rgba(216, 192, 216, 0.7); */
+    background-color: white;
+}
+
+blockquote {
+    font-size:40px;
+}
+blockquote b {
+    color:orange;
+}
+
+footer .col {
+    text-align: center;
+}

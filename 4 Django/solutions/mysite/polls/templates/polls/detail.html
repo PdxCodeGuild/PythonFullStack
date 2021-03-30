@@ -1,0 +1,46 @@
+{% extends 'polls/base.html' %}
+
+{% block title%}{{ question.question_text }}{% endblock %}
+
+{% block content %}
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+    <form action="{% url 'polls:vote' question.id %}" method="post">
+        {% csrf_token %}
+        {% comment %} <input type="radio" name="choice" id="nochoice" value="" checked disabled>
+        <label for="nochoice">No Choice</label><br> {% endcomment %}
+        {% for choice in question.choices.all %}
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" {% if forloop.first %}checked{% endif %}>
+                <label class="form-check-label" for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label>
+            </div>
+        {% endfor %}
+        <div class="d-flex align-items-center my-3">
+            <input class="btn btn-primary me-3" type="submit" value="Vote">
+            <a class="btn btn-secondary" href="{% url 'polls:index' %}">Back</a>
+        </div>
+    </form>
+
+     
+
+{% endblock %}
+
+
+{% comment %} <input type="radio" name="fruit" value="Apple">
+<label>Apple</label>
+<br/>
+
+<input type="radio" name="fruit" value="Banana">
+<label>Banana</label>
+<br/>
+
+<input type="radio" name="fruit" value="Pear">
+<label>Pear</label>
+<br/>
+
+<input type="radio" name="fruit" value="Kiwi" checked>
+<label>Kiwi</label>
+<br/> {% endcomment %}
+
+
+

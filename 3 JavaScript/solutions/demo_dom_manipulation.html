@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden {
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div id="mydiv"></div>
+    <span class="myclass">A</span>
+    <span class="myclass">B</span>
+    <span class="myclass">C</span>
+    <script>
+
+        // let name = prompt('what is your name? ')
+        
+        // let mydiv = document.getElementById('mydiv')
+        let mydiv = document.querySelector('#mydiv')
+        // mydiv.innerText = 'Hello World!'
+        // mydiv.innerText = '<b>Hello World!</b>' // this will NOT work
+        mydiv.innerHTML = '<b>Hello World!</b>'
+        mydiv.style.color = 'red'
+        mydiv.style.backgroundColor = 'blue'
+
+
+        // let myspans = document.querySelectorAll('.myclass')
+        // for (let i=0; i<myspans.length; ++i) {
+        //     myspans[i].innerText = 'Hello ' + i
+        // }
+        // myspan.innerText = 'hi!'
+
+
+    </script>
+</body>
+</html>
