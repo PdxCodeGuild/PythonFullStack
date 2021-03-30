@@ -2,27 +2,6 @@
 
 
 
-
-- 🟢 = done
-- 🟡 = exists somewhere but is not put in place
-- 🟠 = needs heavy editing
-- 🔴 = needs to be created from scratch
-
-
-
-Totals:
-- 62 documents
-- 42 assignments
-- 21 practice sets
-
-Schedule Overview:
-- Weeks 1-3: Python
-- Weeks 5-6: Flask, HTML, CSS
-- Weeks 7-9: JavaScript
-- Weeks 10-12: Django
-- Weeks 13-15: Capstone
-
-
 - [Topics Covered](#topics-covered)
 - [Schedule](#schedule)
   - [Week 1 / Python / Basics](#week-1--python--basics)
@@ -58,6 +37,32 @@ Schedule Overview:
     - [Assignments](#assignments-3)
     - [Practice](#practice-3)
 
+
+
+
+
+---------
+
+- 🟢 = done
+- 🟡 = exists somewhere but is not put in place
+- 🟠 = needs heavy editing
+- 🔴 = needs to be created from scratch
+
+
+
+Totals:
+- 62 documents
+- 42 assignments
+- 21 practice sets
+
+Schedule Overview:
+- Weeks 1-3: Python
+- Weeks 5-6: Flask, HTML, CSS
+- Weeks 7-9: JavaScript
+- Weeks 10-12: Django
+- Weeks 13-15: Capstone
+
+------------
 
 
 ## Topics Covered
