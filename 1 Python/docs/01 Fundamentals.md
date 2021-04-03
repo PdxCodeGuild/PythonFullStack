@@ -11,6 +11,7 @@
 - [Major Constructs](#major-constructs)
   - [Modules](#modules)
   - [Conditionals](#conditionals)
+  - [Loops](#loops)
   - [Functions](#functions)
   - [Classes](#classes)
 - [I/O](#io)
@@ -129,8 +130,10 @@ The easiest way to enter data in your problem is through 'literals', which are c
 
 
 
+### Loops
+
 ### Functions
-calling founctions
+calling functions
 defining a function
 parameters/arguments
 

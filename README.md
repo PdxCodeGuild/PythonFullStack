@@ -1,7 +1,7 @@
 # Python Full Stack
 
 
-
+**Table of Contents**
 - [Topics Covered](#topics-covered)
 - [Schedule](#schedule)
   - [Week 1 / Python / Basics](#week-1--python--basics)
@@ -111,13 +111,18 @@ Schedule Overview:
 - document:   Strings 🟡
 - practice:   Strings 🟡
 - solution:   Strings 🟡
-- assignment: Random Emoticon Generator 🟡
-- solution:   Random Emoticon Generator 🟡
 - assignment: Madlib 🟡
 - solution:   Madlib 🟡
+- assignment: Random Emoticon Generator 🟡
+- solution:   Random Emoticon Generator 🟡
 - document:   While & For Loops 🟡
 - practice:   While & For Loops 🔴
 - solution:   White & For Loops 🔴
+- document:   Random Password Generator 🟡
+- solution:   Random Password Generator 🟡
+- document:   Lists & Tuples
+- practice:   Lists & Tuples
+- solution:   Lists & Tuples
 - assignment: Credit Card Validation 🟡
 - solution:   Credit Card Validation 🟡
 - assignment: Peaks & Valleys 🟡
@@ -128,7 +133,9 @@ Schedule Overview:
 
 ### Week 2 / Python / Intermediate
 
-
+- document:   Functions 🟡
+- practice:   Functions 🔴
+- solution:   Functions 🔴
 - assignment: Pick6 🟡
 - solution:   Pick6 🟡
 - assignment: Bogosort 🟡
@@ -147,10 +154,10 @@ Schedule Overview:
 - solution:   Number to Phrase 🟡
 - assignment: Snowman 🟡
 - solution:   Snowman 🟡
-- document:   Regex 🟡
-- document:   Regex in Python 🟡
-- practice:   Regex in Python 🟠
-- solution:   Regex in Python 🟠
+- document:   Regular Expressions 🟡
+- document:   Regular Expressions in Python 🟡
+- practice:   Regular Expressions in Python 🟠
+- solution:   Regular Expressions in Python 🟠
 - assignment: ARI 🟡
 - solution:   ARI 🟡
 
@@ -305,40 +312,42 @@ Schedule Overview:
 
 ### 0 General
 
-- 01 Course Overview
-- 02 Setup
-- 03 Git
-- 04 Markdown
-- 05 Programming Languages
-- 06 Regular Expressions
-- 07 JSON, CSV, & XML
-- 08 Networking (HTTP Requests & Web APIs)
-- 09 Professional Programming
+- [01 Course Overview](0%20General/01%20Course%20Overview.md)
+- [02 Setup](0%20General/02%20Setup.md)
+- [03 Git](0%20General/03%20Git.md)
+- [04 Markdown](0%20General/04%20Markdown.md)
+- [05 Regular Expressions](0%20General/05%20Regular%20Expressions.md)
+- [06 Programming Languages](0%20General/06%20Programming%20Languages.md)
+- [07 JSON, CSV, & XML](0%20General/07%20JSON,%20CSV,%20&%20XML.md)
+- [08 Networking](0%20General/08%20Networking.md) (HTTP Requests & Web APIs)
+- [09 Professional Programming](0%20General/09%20Professional%20Programming.md)
 
 ### 1 Python
 
 #### Documents
 
-- 00 Overview
-- 01 Fundamentals
-- 02 Numbers & Arithmetic
-- 04 Booleans, Comparisons, & Conditionals
-- 03 Strings
-- 06 While & For Loops
-- 05 Lists & Tuples
-- 07 Dictionaries
-- 08 Functions
-- 09 Classes
-- 10 File IO
-- 12 Regular Expressions
-- 13 Modules & Packages
-- 14 Exceptions
-- 15 Docstrings
-- 16 Virtual Environments
-- Data Structures & Algorithms
-- Datetime
-- Requests
-- Sets
+- [00 Overview](1%20Python/docs/00%20Python%20Overview.md)
+- [01 Fundamentals](1%20Python/docs/01%20Fundamentals.md)
+- [02 Exceptions & Testing](1%20Python/docs/02%20Exceptions%20&%20Testing.md)
+- [03 Numbers & Arithmetic](1%20Python/docs/03%20Numbers%20&%20Arithmetic.md)
+- [04 Booleans, Comparisons, & Conditionals](1%20Python/docs/04%20Booleans,%20Comparisons,%20&%20Conditionals.md)
+- [05 Imports, Modules, & Packages](1%20Python/docs/05%20Imports,%20Modules,%20&%20Packages.md)
+- [06 Random](1%20Python/docs/06%20Random.md)
+- [07 Strings](1%20Python/docs/07%20Strings.md)
+- [08 While & For Loops](1%20Python/docs/08%20While%20&%20For%20Loops.md)
+- [09 Lists & Tuples](1%20Python/docs/09%20Lists%20&%20Tuples.md)
+- [10 Functions](1%20Python/docs/10%20Functions.md)
+- [11 Dictionaries](1%20Python/docs/11%20Dictionaries.md)
+- [12 Regular Expressions in Python](1%20Python/docs/12%20Regular%20Expressions%20in%20Python.md)
+- [13 Searching & Sorting Algorithms](1%20Python/docs/13%20Searching%20&%20Sorting%20Algorithms.md)
+- [14 Classes](1%20Python/docs/14%20Classes.md)
+- [15 Linked Lists & Trees](1%20Python/docs/15%20Linked%20Lists%20&%20Trees.md)
+- [16 Requests](1%20Python/docs/16%20Requests.md)
+- [File IO](1%20Python/docs/File%20IO.md)
+- [Docstrings](1%20Python/docs/Docstrings.md)
+- [Virtual Environments](1%20Python/docs/Virtual%20Environments.md)
+- [Datetime](1%20Python/docs/Datetime.md)
+- [Sets](1%20Python/docs/Sets.md)
 
 #### Assignments
 
@@ -446,10 +455,6 @@ Schedule Overview:
 - 08 Weather API
 
 #### Practice
-
-
-
-
 
 
 ### 4 Django

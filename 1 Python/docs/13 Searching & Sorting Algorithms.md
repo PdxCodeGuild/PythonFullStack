@@ -1,8 +1,4 @@
 
-
-
-# Data Structures & Algorithms
-
 ## Big-O
 
 
@@ -27,9 +23,5 @@ The `push` operation adds a new element at the 'top' of the stack.
 ```
 (10,)
 ```
-
-## Algorithms
-
-### Searching Algorithms
 
 
