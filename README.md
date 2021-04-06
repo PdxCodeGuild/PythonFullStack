@@ -81,50 +81,51 @@ Schedule Overview:
 - [document:   Markdown](0%20General/04%20Markdown.md)
 - [document:   Python Overview](1%20Python/docs/00%20Python%20Overview.md)
 - [document:   Fundamentals](1%20Python/docs/01%20Fundamentals.md)
-- [assignment: Turtle](1%20Python/labs/01%20Turtle.md)
-- solution:   Turtle 🟡
+- [assignment: Turtle](1%20Python/labs/Turtle.md)
+- solution:   Turtle
 - [document:   Exceptions & Testing](1%20Python/docs/02%20Exceptions%20&%20Testing.md)
-- [assignment: Mad Lib](1%20Python/labs/02%20Mad%20Lib.md)
+- [assignment: Mad Lib](1%20Python/labs/Mad%20Lib.md)
+- solution:   Madlib
 - [document:   Numbers & Arithmetic](1%20Python/docs/03%20Numbers%20&%20Arithmetic.md)
-- [practice:   Numbers & Arithmetic](1%20Python/practice/01_numbers.py)
+- [practice:   Numbers & Arithmetic](1%20Python/practice/numbers.py)
 - solution:   Numbers & Arithmetic
-- [assignment: Make Change](1%20Python/labs/02%20Make%20Change.md)
-- solution:   Make Change 🟡
+- [assignment: Make Change](1%20Python/labs/Make%20Change.md)
+- solution:   Make Change
 - [document:   Booleans, Comparisons, & Conditionals](1%20Python/docs/04%20Booleans,%20Comparisons,%20&%20Conditionals.md)
-- [practice:   Booleans, Comparisons, & Conditionals](1%20Python/practice/02_booleans.py)
-- solution:   Booleans, Comparisons, & Conditionals 🟠
-- [assignment: Grading](1%20Python/labs/03%20Grading.md)
-- solution:   Grading 🟡
-- assignment: Rock Paper Scissors 🟡
-- solution:   Rock Paper Scissors 🟡
-- document:   Imports, Modules, & Packages 🟠
-- document:   Random 🟠
-- practice:   Random 🟡
-- solution:   Random 🟡
-- assignment: Magic 8 Ball 🟡
-- solution:   Magic 8 Ball 🟡
-- document:   Strings 🟡
-- practice:   Strings 🟡
-- solution:   Strings 🟡
-- assignment: Madlib 🟡
-- solution:   Madlib 🟡
-- assignment: Random Emoticon Generator 🟡
-- solution:   Random Emoticon Generator 🟡
-- document:   While & For Loops 🟡
-- practice:   While & For Loops 🔴
-- solution:   White & For Loops 🔴
-- document:   Random Password Generator 🟡
-- solution:   Random Password Generator 🟡
-- document:   Lists & Tuples
-- practice:   Lists & Tuples
+- [practice:   Booleans, Comparisons, & Conditionals](1%20Python/practice/booleans.py)
+- solution:   Booleans, Comparisons, & Conditionals
+- [assignment: Grading](1%20Python/labs/Grading.md)
+- solution:   Grading
+- [document:   Imports, Modules, & Packages](1%20Python/docs/05%20Imports,%20Modules,%20&%20Packages.md)
+- [document:   Random](1%20Python/docs/06%20Random.md)
+- [practice:   Random](1%20Python/practice/random.py)
+- solution:   Random
+- [assignment: Magic 8 Ball](1%20Python/labs/Magic%208%20Ball.md)
+- solution:   Magic 8 Ball
+- [assignment: Random Emoticon Generator](1%20Python/labs/Random%20Emoticon%20Generator.md)
+- solution:   Random Emoticon Generator
+- [document:   While & For Loops](1%20Python/docs/07%20While%20&%20For%20Loops.md)
+- [practice:   While & For Loops](1%20Python/practice/loops.py)
+- solution:   White & For Loops
+- [assignment: Rock Paper Scissors](1%20Python/labs/05%20Rock%20Paper%20Scissors.md)
+- solution:   Rock Paper Scissors
+- [assignment: Guess the Number](1%20Python/labs/Guess%20the%20Number.md)
+- solution:   Guess the Number
+- [document:   Strings](1%20Python/docs/08%20Strings.md)
+- [practice:   Strings](1%20Python/practice/strings.py)
+- solution:   Strings
+- [assignment: Random Password Generator](1%20Python/labs/Random%20Password%20Generator.md)
+- solution:   Random Password Generator
+- [document:   Lists & Tuples](1%20Python/docs/09%20Lists%20&%20Tuples.md)
+- [practice:   Lists & Tuples](1%20Python/practice/lists.py)
 - solution:   Lists & Tuples
-- assignment: Credit Card Validation 🟡
-- solution:   Credit Card Validation 🟡
-- assignment: Peaks & Valleys 🟡
-- solution:   Peaks & Valleys 🟡
-- assignment: Rot Cipher 🟡
-- solution:   Rot Cipher 🟡
-- document:   Programming Languages 🟡
+- [assignment: Credit Card Validation](1%20Python/labs/Credit%20Card%20Validation.md)
+- solution:   Credit Card Validation
+- [assignment: Peaks & Valleys](1%20Python/labs/Peaks%20and%20Valleys.md)
+- solution:   Peaks & Valleys
+- [assignment: Rot Cipher](1%20Python/labs/Rot%20Cipher.md)
+- solution:   Rot Cipher
+- [document:   Programming Languages](0%20General/06%20Programming%20Languages.md)
 
 ### Week 2 / Python / Intermediate
 
@@ -345,30 +346,30 @@ Schedule Overview:
 
 #### Assignments
 
-- 01 Turtle
-- 02 Mad Lib
-- 03 Grading
-- 04 Magic 8 Ball
-- 05 Emoticon Generator
-- 06 Password Generator
-- 07 Rock Paper Scissors
-- 08 Guess the Number
-- 09 Peaks and Valleys
-- 10 Make Change
-- 11 Blackjack Advice
-- 12 Rot Cipher
-- 13 Number to Phrase
-- 14 Unit Converter
-- 15 Count Words
-- 16 ARI
-- 17 Quotes API
-- 18 ATM
-- 19 Rain Data
-- 20 Adventure
-- Any API
-- Bogosort
-- Credit Card Validation
-- Currency Exchange
+- [01 Turtle](1%20Python/labs/Turtle.md)
+- [02 Mad Lib](1%20Python/labs/Mad%20Lib.md)
+- [03 Make Change](1%20Python/labs/Make%20Change.md)
+- [04 Grading](1%20Python/labs/Grading.md)
+- [05 Magic 8 Ball](1%20Python/labs/Magic%208%20Ball.md)
+- [06 Random Emoticon Generator](1%20Python/labs/Random%20Emoticon%20Generator.md)
+- [07 Rock Paper Scissors](1%20Python/labs/Rock%20Paper%20Scissors.md)
+- [08 Guess the Number](1%20Python/labs/Guess%20the%20Number.md)
+- [09 Random Password Generator](1%20Python/labs/Random%20Password%20Generator.md)
+- [10 Credit Card Validation](1%20Python/labs/Credit%20Card%20Validation.md)
+- [11 Peaks and Valleys](1%20Python/labs/Peaks%20and%20Valleys.md)
+- [12 Rot Cipher](1%20Python/labs/Rot%20Cipher.md)
+- [Blackjack Advice](1%20Python/labs/Blackjack%20Advice.md)
+- [Number to Phrase](1%20Python/labs/Number%20to%20Phrase.md)
+- [Unit Converter](1%20Python/labs/Unit%20Converter.md)
+- [Count Words](1%20Python/labs/Count%20Words.md)
+- [ARI](1%20Python/labs/Ari.md)
+- [Quotes API](1%20Python/labs/Quotes%20API.md)
+- [ATM](1%20Python/labs/ATM.md)
+- [Rain Data](1%20Python/labs/Rain%20Data.md)
+- [Adventure](1%20Python/labs/Adventure.md)
+- [Any API](1%20Python/labs/Any%20API.md)
+- [Bogosort](1%20Python/labs/Bogosort.md)
+- [Currency Exchange](1%20Python/labs/Currency%20Exchange%20API.md)
 - Snowman (hangman)
 - LCR
 - Pick 6
