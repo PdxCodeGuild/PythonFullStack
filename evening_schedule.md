@@ -1,0 +1,71 @@
+- Week 1 / Python - Basics
+    - Setup / Git / Markdown
+    - Python Overview / Fundamentals
+    - Exceptions & Testing
+    - Numbers & Arithmetic
+    - Booleans, Comparisons, & Conditionals
+- Week 2 / Python - Basics
+    - Imports, Modules, & Packages
+    - Random
+    - Strings
+    - While & For loops
+    - Lists and Tuples
+- Week 3 / Python - Intermediate
+    - Functions
+    - Datetimes
+    - Dictionaries
+    - Regular Expressions
+- Week 4 / Python - Data Structures & Algorithms
+    - Searching & Sorting Algorithms
+    - Classes
+    - Linked Lists & Trees
+- Week 5 / Python - Requests & APIs
+    - Networking
+    - Requests
+- Week 6 / Flask & HTML
+    - HTML Overview
+    - HTML Elements
+    - Flask Overview
+    - Flask Views
+    - Flask Templates
+- Week 7 / Flask, HTML & CSS
+    - Forms & Input Elements
+    - CSS Overview
+    - CSS Selectors
+    - CSS Properties
+- Week 8 / CSS
+    - Flexbox
+    - CSS Grid
+- Week 9 / JavaScript - Basics
+    - Overview
+    - Fundamentals
+    - Numbers & Arithmetic
+    - Booleans, Comparisons, & Conditionals
+    - Strings
+    - Objects
+    - While & For loops
+    - Arrays
+    - Functions
+- Week 10 / JavaScript - Basics
+    - HTML Interaction
+- Week 11 / JavaScript - Vue
+    - Vue
+- Week 12 / JavaScript - Ajax & APIs
+    - Ajax
+- Week 13 / Django - Basics
+    - Django Overview
+    - URLConf
+    - Views
+    - Templates
+- Week 14 / Django - Basics
+    - Databases
+    - Models
+- Week 15 / Django - Intermediate
+    - User Management System
+    - File Uploads
+- Week 16 / Django - APIs
+    - SPAs
+- Week 17 / Capstone
+- Week 18 / Capstone
+- Week 19 / Capstone
+- Week 20 / Capstone
