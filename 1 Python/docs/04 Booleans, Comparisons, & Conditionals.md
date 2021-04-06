@@ -17,9 +17,17 @@
 
 ## Booleans
 
-Booleans are one of the built-in types, and represent either `True` or `False`.
+Booleans are one of the built-in types, and represent either `True` or `False`. There are three boolean operators: `not`, `and` and `or`.
 
-There are three boolean operators: `not`, `and` and `or`.
+
+| `a` | `b` | `a and b` | `a or b` |  `not a` |
+| --- | --- | ---       | ---      | ---      |
+| F   | F   | F         | F        | T        |
+| F   | T   | F         | T        | T        |
+| T   | F   | F         | T        | F        |
+| T   | T   | T         | T        | F        |
+
+
 
 ### And: `and`
 

@@ -6,7 +6,6 @@
 - [Routing](#routing)
 - [Template Rendering](#template-rendering)
 - [Static Files](#static-files)
-- [Forms](#forms)
 - [Query Parameters](#query-parameters)
 
 
@@ -137,27 +136,6 @@ Static files (css, js, images, etc) must be put in a folder called `static`. You
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
 ```
 
-## Forms
-
-Forms allow the user to enter information, below is a simple form with a single text input field. The `action` is the path to which your form will be submitted, the `method` is the http method used, the `input` fields allow the user to enter information and the `name` attribute is used to retrieve that data on the back-end.
-
-```html
-<form action="" method="post">
-  <input type="text" name="input_text" placeholder="enter some text"/>
-  <button type="submit">submit</button>
-</form>
-```
-
-By default, routes only respond to GET requests, we can allow them to respond to requests using other methods by passing them to the `route`.
-
-```python
-@app.route('/', methods=['GET', 'POST'])
-def index():
-    if request.method == 'POST':
-        contact_name = request.form['input_text']
-        print(contact_name)
-    return render_template('index.html')
-```
 
 ## Query Parameters
 

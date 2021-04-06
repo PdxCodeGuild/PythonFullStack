@@ -75,34 +75,29 @@ Schedule Overview:
 ## Schedule
 
 ### Week 1 / Python / Basics
-- document:   Course Overview 🟡
-- document:   Setup 🟠
-- document:   Git 🟠
-- document:   Markdown 🟡
-- document:   Python Overview 🟡
-- document:   Fundamentals 🟡
-- practice:   Fundamentals 🟠
-- solution:   Fundamentals 🟠
-- assignment: Turtle 🟡
+- [document:   Course Overview](0%20General/01%20Course%20Overview.md)
+- [document:   Setup](0%20General/02%20Setup.md)
+- [document:   Git](0%20General/03%20Git.md)
+- [document:   Markdown](0%20General/04%20Markdown.md)
+- [document:   Python Overview](1%20Python/docs/00%20Python%20Overview.md)
+- [document:   Fundamentals](1%20Python/docs/01%20Fundamentals.md)
+- [assignment: Turtle](1%20Python/labs/01%20Turtle.md)
 - solution:   Turtle 🟡
-- document:   Exceptions & Testing 🟠
-- practice:   Exceptions & Testing 🔴
-- solution:   Exceptions & Testing 🔴
-- document:   Numbers & Arithmetic 🟡
-- practice:   Numbers & Arithmetic 🟠
-- solution:   Numbers & Arithmetic 🟠
-- assignment: Make Change 🟡
+- [document:   Exceptions & Testing](1%20Python/docs/02%20Exceptions%20&%20Testing.md)
+- [assignment: Mad Lib](1%20Python/labs/02%20Mad%20Lib.md)
+- [document:   Numbers & Arithmetic](1%20Python/docs/03%20Numbers%20&%20Arithmetic.md)
+- [practice:   Numbers & Arithmetic](1%20Python/practice/01_numbers.py)
+- solution:   Numbers & Arithmetic
+- [assignment: Make Change](1%20Python/labs/02%20Make%20Change.md)
 - solution:   Make Change 🟡
-- document:   Booleans, Comparisons, & Conditionals 🟡
-- practice:   Booleans, Comparisons, & Conditionals 🟠
+- [document:   Booleans, Comparisons, & Conditionals](1%20Python/docs/04%20Booleans,%20Comparisons,%20&%20Conditionals.md)
+- [practice:   Booleans, Comparisons, & Conditionals](1%20Python/practice/02_booleans.py)
 - solution:   Booleans, Comparisons, & Conditionals 🟠
-- assignment: Grading 🟡
+- [assignment: Grading](1%20Python/labs/03%20Grading.md)
 - solution:   Grading 🟡
 - assignment: Rock Paper Scissors 🟡
 - solution:   Rock Paper Scissors 🟡
 - document:   Imports, Modules, & Packages 🟠
-- practice:   Imports, Modules, & Packages 🔴
-- solution:   Imports, Modules, & Packages 🔴
 - document:   Random 🟠
 - practice:   Random 🟡
 - solution:   Random 🟡
@@ -169,7 +164,6 @@ Schedule Overview:
 - document:   Classes 🟡
 - practice:   Classes 🔴
 - solution:   Classes 🔴
-<!-- not sure about these labs, ATM is awkward, a todo list could have a list of dictionaries and add file i/o -->
 - assignment: ATM 🟡
 - solution:   ATM 🟡
 - assignment: Todo 🟡

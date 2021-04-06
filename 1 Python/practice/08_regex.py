@@ -2,11 +2,9 @@
 # Practice 6: Regular Expressions
 
 
-## Problem 1: Validate an Email Address
+# Validate an Email Address
+# Write a function `validate_email_address` which returns `True` if the given string is an email address, `False` is it isn't.
 
-Write a function `validate_email_address` which returns `True` if the given string is an email address, `False` is it isn't.
-
-```python
 def validate_email_address(email):
     ...
 print(validate_email_address('test@gmail.com')) # True
@@ -14,13 +12,10 @@ print(validate_email_address('abc123@gmail.com')) # True
 print(validate_email_address('test')) # False
 print(validate_email_address('test@gmail')) # False
 print(validate_email_address('test@gmail@com')) # False
-```
 
-## Problem 2: Validate a Phone Number
+# Validate a Phone Number
+# Write a function `validate_phone_number` which returns `True` if the given string is a phone number, `False` if it isn't.
 
-Write a function `validate_phone_number` which returns `True` if the given string is a phone number, `False` if it isn't.
-
-```python
 def validate_phone_number(phone_number):
     ...
 print(validate_phone_number('0123456789')) # True
@@ -28,14 +23,11 @@ print(validate_phone_number('012-345-6789')) # True
 print(validate_phone_number('(012) 345-6789')) # True
 print(validate_phone_number('012-3A5-6789')) # False
 print(validate_phone_number('1-1-1')) # False
-```
 
 
-## Problem 3: Clean a Phone Number
+# Clean a Phone Number
+# Write a function `clean_phone_number` which returns a string containing just the numbers of a phone number if it's valid, `None` if it's not. Hint: use capture groups.
 
-Write a function `clean_phone_number` which returns a string containing just the numbers of a phone number if it's valid, `None` if it's not. Hint: use capture groups.
-
-```python
 def clean_phone_number(phone_number):
     ...
 print(clean_phone_number('0123456789')) # 0123456789
@@ -43,14 +35,10 @@ print(clean_phone_number('012-345-6789')) # 0123456789
 print(clean_phone_number('(012) 345-6789')) # 0123456789
 print(clean_phone_number('012-3A5-6789')) # None
 print(clean_phone_number('1-1-1')) # None
-```
 
-## Problem 4: Find All Numbers
+# Find All Numbers
+# Write a function `find_numbers` which returns a list of floats found in the given string.
 
-
-Write a function `find_numbers` which returns a list of floats found in the given string.
-
-```python
 def find_numbers(text):
     ...
 text = '''
@@ -61,24 +49,17 @@ julie -1.34
 bob   4.123
 '''
 print(find_numbers(text)) # [1.23, 5.45, -1.34, 4.123]
-```
 
-## Problem 5: Parse Query String
+# Parse Query String
+# Write a function `parse_query_string` which takes a string representing a [query string](https://en.wikipedia.org/wiki/Query_string) and returns a dictionary containing the contents.
 
-Write a function `parse_query_string` which takes a string representing a [query string](https://en.wikipedia.org/wiki/Query_string) and returns a dictionary containing the contents.
-
-
-```
 def parse_query_string(qs):
     ...
 print(parse_query_string('?a=1&b=2&c=3')) # {'a': 1, 'b': 2, 'c': 3}
-```
 
-## Problem 6: Parse URL
+# Parse URL
+# Write a function `parse_url` which takes a string representing a url and returns a dictionary containing the various parts.
 
-Write a function `parse_url` which takes a string representing a url and returns a dictionary containing the various parts.
-
-```
 def parse_url(url):
     ...
 print(parse_url('https://en.wikipedia.org/wiki/Web_development#Chronology'))
@@ -89,6 +70,5 @@ print(parse_url('https://en.wikipedia.org/wiki/Web_development#Chronology'))
 #    'path': '/wiki/Web_development',
 #    'fragment': 'Chronology'
 # }
-```
 
 
