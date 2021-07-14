@@ -17,7 +17,7 @@
   - [Replace `a.replace(b, c)`](#replace-areplaceb-c)
   - [Strip `a.strip()`](#strip-astrip)
   - [Split: `a.split(b)`](#split-asplitb)
-  - [Delimeter: `a.join(b)`](#delimeter-ajoinb)
+  - [Join: `a.join(b)`](#join-ajoinb)
   - [Count: `a.count(b)`](#count-acountb)
 - [f-strings](#f-strings)
 - [`in`](#in)
@@ -270,7 +270,7 @@ fruits = 'apples, bananas, pears'
 print(fruits.split(', ')) # ['apples', 'bananas', 'pears']
 ```
 
-### Delimeter: `a.join(b)`
+### Join: `a.join(b)`
 
 `delimeter.join(list)` combines the elements of a list into a single string, separated by the delimeter
 

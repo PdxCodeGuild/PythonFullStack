@@ -54,13 +54,18 @@ There are several graphical interfaces to Git. You can edit files directly on Gi
 
 ### 1.2 Links
 
-- [git book](https://git-scm.com/book/en/v2)
-- [git reference docs](https://git-scm.com/docs)
-- [git tutorial](https://git-scm.com/docs/gittutorial/)
-- [bitbucket git tutorial](https://www.atlassian.com/git/tutorials)
-- [git cheat sheet 1](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
-- [git cheat sheet 2](file:///C:/Users/flux/Downloads/SWTM-2088_Atlassian-Git-Cheatsheet.pdf)
-- [super simple git guide](https://rogerdudler.github.io/git-guide/)
+- Official
+  - [Book](https://git-scm.com/book/en/v2)
+  - [Docs](https://git-scm.com/docs)
+  - [Tutorial](https://git-scm.com/docs/gittutorial/)
+- GitHub
+  - [Guides](https://guides.github.com/)
+  - [Cheat Sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
+- Atlassian
+  - [Tutorials](https://www.atlassian.com/git/tutorials)
+  - [Cheat Sheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
+- [The Simple Guide](https://rogerdudler.github.io/git-guide/)
+- [Learn Git Branching](https://learngitbranching.js.org/)
 
 
 ### 1.3 Terms

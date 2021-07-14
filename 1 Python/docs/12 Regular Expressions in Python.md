@@ -1,6 +1,6 @@
 # Regular Expressions in Python
 
-Regular Expressions are a way of matching patterns in text, they can be used for searching, doing input validation, and more. You can find out more about regular expressions in Python [here](https://docs.python.org/3.8/howto/regex.html#regex-howto) and [here](https://docs.python.org/3.8/library/re.html#re-syntax).
+[Regular Expressions](../../0%20General/05%20Regular%20Expressions.md) are a way of matching patterns in text, they can be used for searching, doing input validation, and more. You can find out more about regular expressions in Python [here](https://docs.python.org/3.8/howto/regex.html#regex-howto) and [here](https://docs.python.org/3.8/library/re.html#re-syntax).
 
 - [Raw Strings: `r''`](#raw-strings-r)
 - [Match and Search: `re.match(pattern, text)`, `re.search(pattern, text)`](#match-and-search-rematchpattern-text-researchpattern-text)
