@@ -2,7 +2,7 @@
 
 ## Setup
 
-1. Preparation
+1. Preparation  
 A few good organizational practices will make this entire process much smoother.  
     - Your Django project *must* be in its own git repo.
 	- Your Django project *should* be at the root of that repo (The `manage.py` file and hidden `.git` folder should be in the same directory.)
@@ -62,9 +62,151 @@ One of the first things that happens after you push a project to Heroku is build
 1. What language is this project in?  (Python)
 2. Which dependencies (libraries & packages) does Heroku need to install in order to run your project? (Django, Pillow, DRF, etc.)
 
-There are multiple ways to 
+There are multiple ways to give Heroku this information, and they each involve a file at the root of your git repo:
 
+### 1) `requirements.txt`
+A requirements.txt file contains a list of all of your project's python dependencies.  For example, if you are using Django 3.2.5 and Pillow 8.3.1, your requirements.txt looks like this:
 ```
 django==3.2.5
 pillow==8.3.1
 ```
+A requirements.txt file can be generated with the `pip freeze` command.  Be sure you are inside your virtual environment **and** at the root of your repo (where the hidden `.git` folder is), and run this command:
+```console
+$ pip freeze > requirements.txt
+```
+This will fill requirements.txt with your Python dependencies (creating the file if needed).
+
+### 2) `Pipfile` and `Pipfile.lock`
+If you are using `pipenv` for your virtual environment, install dependencies with `pipenv install` instead of `pip install` to create a Pipfile and Pipfile.lock.  Here is what a Pipfile looks like:
+
+```
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+pillow = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
+```
+
+Notice the * in the versioning: `django = "*"`.  That means that a specific version of Django wasn't specified.  The Pipfile.lock, however, does keep track of which version of Django has been used in your development environment, and that is the one which Heroku will install when it builds up your project.
+
+If you've been using `pipenv install` to add each dependency, you shouldn't have to do anything extra (like generating a requirements.txt file).  Make sure that each package you are using is in the `[packages]` section of your Pipfile.  (Any dependencies of those packages will be included in the Pipfile.lock)
+
+## `django-on-heroku` and `gunicorn`
+
+Things are always going to be different in a deployment/production enviroment than in a development environment.  There are 3 main things that don't work the same way in a django project deployed to Heroku:
+1. `python manage.py runserver` will no longer be used to run your project.  That command is used for local development.  You will use `gunicorn` to run your project via its wsgi file (more on this later).
+2. Similarly, your static files (images, JavaScript, CSS) are served differently in production than in development.
+3. Your `sqlite` database will not work on Heroku, at least not in an practical way.  Each time a new version of your app is deployed, a new "dyno" is created, always built up from the git repo.  If you run `python manage.py migrate` on your deployed app, it would make a `db.sqlite3` file, which would only persist until a new dyno is spun up: every time you push updates to Heroku, **OR** every time your Heroku app goes to sleep (very often if you are using the free version).  The solution is to use PostgreSQL, which is very easily done with one of these new dependencies.
+
+In fact, [django-on-heroku](https://github.com/pkrefta/django-on-heroku), is going to make a lot of this very simple.  Add two new dependencies to your project:
+```console
+$ pipenv install django-on-heroku gunicorn # if you are using pipenv and a Pipfile
+$ pip install django-on-heroku gunicorn # if you are using requirements.txt
+```
+
+And make one change to your `settings.py`, add these lines to the end of the file:
+```py
+import django_on_heroku
+django_on_heroku.settings(locals())
+```
+
+The `django-on-heroku` package and these two lines are going to take care of the database problem and the static file problem, just like that.
+
+## The Heroku Procfile
+
+The Procfile (process file) is a special Heroku file that tells Heroku which web processes it needs to run to serve your app.  So create a Procfile at the root of your repo (where the .git folder is).  Hopefully, this is also where your `manage.py` file is.  
+Here, I'm using the `tree` command to see that this demo project has `Pipfile`, `Pipfile.lock`, `Procfile` and `manage.py` files, and a `django_demo` project folder with additional files:
+
+```console
+$ tree
+.
+├── Pipfile
+├── Pipfile.lock
+├── Procfile
+├── django_demo
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+└── manage.py
+
+1 directory, 9 files
+```
+
+To deploy on Heroku, we want to use `gunicorn` to run the `wsgi.py` file inside the project folder.  This will do, in production, what `python manage.py runserver` does in development.  We will declare this as a web process in the Procfile:
+
+```
+web: gunicorn django_demo.wsgi
+```
+Be sure to replace `django_demo` with the name of your project folder.  So, that will run the project, but there's one thing missing.  You'll need to migrate your schema from your `models.py` to your new PostrgreSQL database.  So, you will can a release command to the Procfile:
+
+```
+web: gunicorn django_demo.wsgi
+release: python manage.py migrate
+```
+
+Be sure to use `python` here, not `py` or `python3`.  This will migrate everything to your new database (create the tables for your schema).  Note that you don't have to run `makemigrations` as well.  That only needs to be done after you make changes to your Models, and all your migrations are already stored as Python files in your repo.  
+### Note:
+If you have a different file structure (your `manage.py` and project folder are not in the root of the repo), you can still run these commands.  Let's look at one of those file structures here:
+
+```console
+$ tree
+.
+├── Pipfile
+├── Pipfile.lock
+└── django_demo
+    ├── django_demo
+    │   ├── __init__.py
+    │   ├── asgi.py
+    │   ├── settings.py
+    │   ├── urls.py
+    │   └── wsgi.py
+    └── manage.py
+
+2 directories, 8 files
+```
+
+So here `manage.py` **and** the project folder are both inside of another `django_demo` folder.  Luckily, Procfile commands can still work:
+
+```
+web: cd django_demo && gunicorn django_demo.wsgi
+release: cd django_demo && python manage.py migrate
+```
+
+The `&&` can be used to run a series of commands in one line.  So each command will `cd` into `django_demo` before running the web process.
+
+## Push to Heroku
+
+The moment of truth.  With git, add and commit the changes you've made locally.  You can still push to GitHub (origin), but you can also push to a new remote: heroku.
+```console
+$ git push heroku main
+```
+This will push your branch to main.  If you are on another branch, you can use an altered command to push that branch *as* main: [https://devcenter.heroku.com/articles/git#deploying-from-a-branch-besides-main](https://devcenter.heroku.com/articles/git#deploying-from-a-branch-besides-main)
+
+When this command runs it will do a few things:
+1. Push to the heroku remote
+2. Look for a Pipfile or requirements.txt to recognize a Python app.
+3. Use that file to install all project dependencies.
+4. Run your web command.
+5. Run your release command.
+
+If you see your migrations being made in the feedback, you're in pretty good shape.  If things go at least 50% right, you should see something about your app being deployed to Heroku.  It will be at `https://your-app-name.herokuapp.com`.  So go there and see if it *really* worked.
+
+## Troubleshooting
+
+There's a decent chance that something went wrong.  Let's start with the feedback that Heroku provides if there are errors.
+1. The output after running `git push heroku main`  
+You may see an error in this output.  Errors here usually occur somewhere in the process of building up your app.
+2. If your app *is* deployed but you see "Application Error" when you visit the page, follow Heroku's advice and run `heroku logs` in your terminal to get an output of what happened.  These errors are usually problems in the Procfile commands.
+
+Common problems and how to solve them:
+* there's this thing
