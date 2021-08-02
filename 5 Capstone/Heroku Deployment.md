@@ -208,5 +208,29 @@ There's a decent chance that something went wrong.  Let's start with the feedbac
 You may see an error in this output.  Errors here usually occur somewhere in the process of building up your app.
 2. If your app *is* deployed but you see "Application Error" when you visit the page, follow Heroku's advice and run `heroku logs` in your terminal to get an output of what happened.  These errors are usually problems in the Procfile commands.
 
-Common problems and how to solve them:
-* there's this thing
+### Common problems and how to solve them:
+* No buildpack detected: Heroku could not tell that your project was written in Python.  Be sure that your requirements.txt or Pipfile is at the root of the repo.
+* Module not found: Usually this means there is more than one buildpack file detected, and Heroku read the one you weren't using.  If you're going the requirements.txt route and still have a Pipfile and/or Pipfile.lock, delete those files.
+* No web processes running.  You'll see this after an apparently successful deployment, in the `heroku logs` feedback.  Make sure that your Procfile commands are doing what you think they are.  Double check the paths from the route of your repo to your `manage.py` and `wsgi.py` files.
+
+## Running `manage.py` commands
+One thing to note is that you have a brand new Postr\greSQL database with empty tables and no data.  That means no users or superusers.  To create a superuser and use the admin panel on your deployed app, run this command:
+```console
+$ heroku run python manage.py createsuperuser
+```
+Follow the prompts to create a superuser just as you would in local development.  The `heroku run` prefix can be used to run any django command, including custom management commands you have written yourself.
+
+## Environment variables
+To safely hide api keys and other important information that is not included in the repo, you can store them as environment variables (called config variables on Heroku).  There are two ways to do this.
+1. Heroku CLI
+If you were to set your django SECRET_KEY to 12345 (not advised), you could run this command:
+```console
+$ heroku config:set SECRET_KEY=12345
+```
+2. Heroku Dashboard  
+This is a good time to introduce the Heroku Dashboard, where you can do much of the management of your app once it's been deployed.  From the dashboard, click on your app, then click on settings >> reveal config vars.  From here, you can set new key value pairs.
+
+Once you've set a config variable, you can access it anywhere in your code (likely your settings.py) with `os.environ.get('SECRET_KEY)`.  This is also where the URL for your new PostgreSQL database is stored.
+
+## File uploads
+If your Django application is something like a photo gallery, where the user uploads files through form submission, you will have to use an external file hosting service.  [Cloudinary](https://cloudinary.com/documentation/django_integration) and [Dropbox](https://www.dropbox.com/developers/documentation/python#tutorial) both have SDKs (software development kits) for integrating with Python projects.
