@@ -7,6 +7,12 @@ The following code randomizes the contents of wallet.txt
 """
 
 symbols = {
+    # Arabic characters for the Afghani and Rial
+    # had to be commented out due to some bugs
+    # in the wallet.txt output.
+    # I believe this was due to the Arabic
+    # script connecting and reading right
+    # to left.
     # '؋': 'Afghanistan Afghani',
     'ƒ': 'Aruba Guilder',
     '₼': 'Azerbaijan Manat',
