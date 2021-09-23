@@ -6,7 +6,7 @@ There is a lot that goes into SEO, but most things can be covered by adding `<me
 
 The head contains metadata, which isn't displayed directly on the page, but serves as additional data about the document.  
 
-Some elements in the head, like a `<link>` a css file, or a `<script>` tag, can ultimately change what appears on the page, but `<meta>` tags don't, and the average web user has no idea they are there.  
+Some elements in the head, like a `<link>` a css file, or a `<script>` tag, can ultimately change what appears on the page, but most `<meta>` tags don't, and the average web user has no idea they are there.  
 
 Meta tags also determine how a preview will display when shared on Facebook or Slack:
 
@@ -14,7 +14,9 @@ Meta tags also determine how a preview will display when shared on Facebook or S
 
 Moz.com has some good information about meta tags here (along with some templates for getting started): [https://moz.com/blog/meta-data-templates-123](https://moz.com/blog/meta-data-templates-123).  
 
-You can learn about Open Graph here: [https://ogp.me](https://ogp.me)  
+You can learn about Open Graph here: [https://ogp.me](https://ogp.me).  
+
+You can test your web page's social preview unfurls here: [https://www.opengraph.xyz/](https://www.opengraph.xyz/).  
 
 Here is a template as well with some of the basics:
 ### Note: Any text in brackets will be completely replaced by text specific to your site (i.e.: `[https://example-website.com]`)
