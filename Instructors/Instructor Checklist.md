@@ -31,6 +31,8 @@ Classes need to end with their graduation date on the last day of the 15th/17th 
 
 During a bootcamp, class must be offered at least one day in any seven calendar days. Class can not be cancelled or scheduled off for planed dates such as holidays/weekends more than six contiguous days in a row. The VA does not allow us to take an entire week off during a bootcamp, and if this happens, veterans have to pay back that week's housing allowance.
 
+Labs must have a due date no longer than two weeks after the lab is first assigned. Merritt recommends a soft deadline of Friday of the week they're assigned, and hard date of two weeks. If someone isn't able to get stuff in, they have to start going to study hall or meet with Sheri. 
+
 ## Teaching Tools, PDX Code Guild Style
 
 ### Slack
@@ -79,6 +81,7 @@ Staff files and class records should be kept on Google Drive. This includes atte
 
 - [Create attendance sheet](https://docs.google.com/spreadsheets/d/1SEPHXpAQda5-P2B8gHPz1rlVAD7452LhQVrcUJqsId4/edit?usp=sharing)
 - Create Github repo
+- Create lab grading spreadsheet
 - Create Slack channel
 - Create reoccuring Zoom meeting  
 - [Send welcome email to students with information on how to get started with remote apps](Welcome%20Email.md)
