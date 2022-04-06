@@ -263,7 +263,7 @@ print('__%__hello_world__%__'.strip('_%')) # hello_world
 
 ### Split: `a.split(b)`
 
-`s.split(delimeter)` splits a string into a list, if no parameter is given, it'll split on whitespace
+`s.split(delimiter)` splits a string into a list, if no parameter is given, it'll split on whitespace
 
 ```python
 fruits = 'apples, bananas, pears'
@@ -272,7 +272,7 @@ print(fruits.split(', ')) # ['apples', 'bananas', 'pears']
 
 ### Join: `a.join(b)`
 
-`delimeter.join(list)` combines the elements of a list into a single string, separated by the delimeter
+`delimiter.join(list)` combines the elements of a list into a single string, separated by the delimeter
 
 ```python
 print(' - '.join(['apples', 'bananas', 'pears']) # apples - bananas - pears
@@ -308,13 +308,13 @@ if 'h' in 'hello world!':
 
 ```python
 text = 'Hey!'
-if char in text:
+for char in text:
   print(char)
 ```
-> H
-> e
-> y
-> !
+> H  
+> e  
+> y  
+> ! 
 
 ## Docstrings
 

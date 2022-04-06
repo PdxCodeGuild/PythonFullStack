@@ -131,7 +131,7 @@ def crash(i):
 
 ## Catching Exceptions
 
-You can catch exceptions that are raised by wrapping the code that may raise them in a try-except block. When the code throws an exception, any code after it won't be executed. [Is This Best Practice?](https://stackoverflow.com/questions/16138232/is-it-a-good-practice-to-use-try-except-else-in-python)
+You can catch exceptions that are raised by wrapping the code that may raise them in a try-except block. When the code throws an exception, any code after it won't be executed. [Is This Best Practice?](https://stackoverflow.com/questions/16138232/is-it-a-good-practice-to-use-try-except-else-in-python) [Another Article!](https://betterprogramming.pub/in-python-dont-look-before-you-leap-cff250881930)
 
 ```python
 try:
