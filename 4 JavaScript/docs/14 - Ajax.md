@@ -4,14 +4,15 @@
 AJAX stands for "asynchronous javascript and XML", and allows you to execute HTTP requests from JavaScript. You can read more about AJAX [here](https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started), [here](https://developer.mozilla.org/en-US/docs/AJAX) and [here](https://www.w3schools.com/xml/ajax_intro.asp).
 
 
-- [AJAX in Axios](#ajax-in-axios)
-  - [Setting Query Parameters](#setting-query-parameters)
-  - [Setting Custom Request Headers](#setting-custom-request-headers)
-  - [Sending Data](#sending-data)
-- [AJAX in Vanilla JavaScript](#ajax-in-vanilla-javascript)
-- [AJAX in jQuery](#ajax-in-jquery)
-- [CORS](#cors)
-- [JSONP](#jsonp)
+- [AJAX](#ajax)
+	- [AJAX in Axios](#ajax-in-axios)
+		- [Setting Query Parameters](#setting-query-parameters)
+		- [Setting Custom Request Headers](#setting-custom-request-headers)
+		- [Sending Data](#sending-data)
+	- [AJAX in Vanilla JavaScript](#ajax-in-vanilla-javascript)
+	- [AJAX in jQuery](#ajax-in-jquery)
+	- [CORS](#cors)
+	- [JSONP](#jsonp)
 
 
 

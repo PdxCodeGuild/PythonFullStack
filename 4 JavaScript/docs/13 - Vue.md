@@ -3,16 +3,20 @@
 # Vue
 
 
-- [Overview](#overview)
-- [Including Vue](#including-vue)
-- [Anatomy of a Vue App](#anatomy-of-a-vue-app)
-- [Rendering Values](#rendering-values)
-- [Setting Attributes](#setting-attributes)
-- [Conditionals](#conditionals)
-- [Loops](#loops)
-- [Input Fields](#input-fields)
-- [Event Listeners](#event-listeners)
-- [Lifecycle Hooks](#lifecycle-hooks)
+Note: This document was written for Vue 2.  Vue 3 works much the same way with some small changes.  Please reference the [Vue 3 notes](#vue-3) at the end of this document and the [Vue 3 official docs](https://v3.vuejs.org).
+
+- [Vue](#vue)
+	- [Overview](#overview)
+	- [Including Vue](#including-vue)
+	- [Anatomy of a Vue App](#anatomy-of-a-vue-app)
+	- [Rendering Values](#rendering-values)
+	- [Setting Attributes](#setting-attributes)
+	- [Conditionals](#conditionals)
+	- [Loops](#loops)
+	- [Input Fields](#input-fields)
+	- [Event Listeners](#event-listeners)
+	- [Lifecycle Hooks](#lifecycle-hooks)
+	- [Vue 3](#vue-3)
 
 ## Overview
 
@@ -247,3 +251,35 @@ Lifecycle hooks are special functions called throughout the lifecycle of a Vue a
   })
 </script>
 ```
+
+
+
+## Vue 3
+
+The latest version of Vue, Vue 3, has many under-the-hood performance improvements, but generally works the same way for developers.  There are three big changes however: a different CDN is used for the Vue 3, the boilerplate code for creating a Vue app is a little different **and** the `data` property must be a function that returns an object:
+
+```html
+<head>
+  <!-- Vue 3 CDN tag: -->
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  <div id="app">
+    {{ message }}
+  </div>
+  <script>
+    const App = {
+      // the data property is a function that returns an object
+      data() {
+        return {
+          message: 'Vue 3 is cool'
+        }
+      }
+    }
+    // this is how you create & mount the app in Vue 3:
+    Vue.createApp(App).mount('#app')
+  </script>
+</body>
+```
+
+Check out the [Vue 3 docs](https://v3.vuejs.org) for further reference.
