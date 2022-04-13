@@ -14,7 +14,12 @@ A ticket contains 6 numbers, 1 to 99, and the number of matches between the tick
 - if 5 numbers match, you win $1,000,000
 - if 6 numbers match, you win $25,000,000
 
-One function you might write is `pick6()` which will generate a list of 6 random numbers, which can then be used for both the winning numbers and tickets. Another function could be `num_matches(winning, ticket)` which returns the number of matches between the winning numbers and the ticket.
+
+Write the following functions and use them in the code:
+
+- `pick6()`: Generate a list of 6 random numbers, which can then be used for both the winning numbers and tickets. Return the list
+- `num_matches(winning, ticket)`:  Return the number of matches between the winning numbers and the ticket.
+
 
 ## Steps
 
