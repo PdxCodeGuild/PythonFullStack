@@ -12,7 +12,6 @@ in smartphone-portrait mode.  Fill in the css below until it looks right. */
 	necessary css changes for landscape-width here. */
 }
 	
-	
 @media (min-width: 768px) {
 	/* MEDIUM SCREEN WIDTH */
 	/* tablets, devices less than 992px wide */
@@ -21,7 +20,6 @@ in smartphone-portrait mode.  Fill in the css below until it looks right. */
 	for tablet-width here. */
 }
 
-
 @media (min-width: 992px) {
 	/* LARGE SCREEN WIDTH */
 	/* laptops, desktops, devices less than 1200px wide */
@@ -29,7 +27,6 @@ in smartphone-portrait mode.  Fill in the css below until it looks right. */
 	/* 4. Turn off responsive design mode on your desktop.  Add any css
 	here to make your page look good on your desktop. */
 }
-
 
 @media (min-width: 1200px) {
 	/* EXTRA LARGE SCREEN WIDTH */

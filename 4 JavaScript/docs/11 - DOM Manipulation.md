@@ -1,18 +1,19 @@
 
-# Editing HTML
+# DOM Manipulation
 
-- [Overview](#overview)
-- [Accessing Elements](#accessing-elements)
-- [Setting innerText and innerHTML](#setting-innertext-and-innerhtml)
-- [Editing Style](#editing-style)
-- [Editing Classes](#editing-classes)
-- [Setting Data](#setting-data)
-- [Editing Attributes](#editing-attributes)
-- [Input Fields](#input-fields)
-  - [Text Input](#text-input)
-  - [Radio Buttons and Checkboxes](#radio-buttons-and-checkboxes)
-  - [Dropdown Lists](#dropdown-lists)
-- [Creating and Adding Elements](#creating-and-adding-elements)
+- [DOM Manipulation](#dom-manipulation)
+	- [Overview](#overview)
+	- [Accessing Elements](#accessing-elements)
+	- [Setting innerText and innerHTML](#setting-innertext-and-innerhtml)
+	- [Editing Style](#editing-style)
+	- [Editing Classes](#editing-classes)
+	- [Setting Data](#setting-data)
+	- [Editing Attributes](#editing-attributes)
+	- [Input Fields](#input-fields)
+		- [Text Input](#text-input)
+		- [Radio Buttons and Checkboxes](#radio-buttons-and-checkboxes)
+		- [Dropdown Lists](#dropdown-lists)
+	- [Creating and Adding Elements](#creating-and-adding-elements)
 
 
 ## Overview

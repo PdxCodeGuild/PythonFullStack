@@ -15,7 +15,9 @@ In my home, `/Users/pete`, I have a `code-guild/` folder.  So, I keep all my cla
 Now I'm where I want to be to clone the repo.
 
 ### `git clone [repo-url]`
-`git clone` will pull down the repo from origin (in this case GitHub).  You can get the repo URL by clicking on the green "Code" button on the main page of the repo.
+`git clone` will pull down the repo from origin (in this case GitHub).  You can get the repo URL by clicking on the green "Code" button on the main page of the repo:
+
+![Green Code Button](green-code-button.png)
 
 You can copy that url, or just run this command here:
 ```sh
@@ -176,6 +178,8 @@ Congratulations, you've commited to the repo.  (Check out your profile page, the
 ## Step 5: Make a Pull Request
 
 If you open up the class repo on GitHub, you should see a notification that you have pushed up changes to a branch recently, with a prompt to create a pull request.  Follow that prompt. And click "Create Pull Request".
+
+![Pull Request Prompt](create-pull-request.png)
 
 #### Note: I will be reviewing and merging all these PRs myself.  For future labs, you will tag the TAs as reviewers to your code.  More on that later.
 

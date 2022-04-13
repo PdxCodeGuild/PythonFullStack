@@ -2,24 +2,38 @@
 # Class Structure
 
 
-- [Objectives](#objectives)
-- [Intro](#intro)
-  - [What is programming?](#what-is-programming)
-  - [Why Python?](#why-python)
-  - [Why Django?](#why-django)
-- [Course Overview](#course-overview)
-- [Submitting Lab Solutions](#submitting-lab-solutions)
-- [Healthy Habits](#healthy-habits)
-- [Terms](#terms)
-- [Exercises](#exercises)
-  - [Lectures & Demonstrations](#lectures--demonstrations)
-  - [Labs](#labs)
-  - [Pair, Group, & Mob Programming](#pair-group--mob-programming)
-  - [Student Presentations](#student-presentations)
-    - [Capstone Presentation](#capstone-presentation)
-- [Rough Timeline](#rough-timeline)
-- [Code of Conduct](#code-of-conduct)
-- [Academic Honesty](#academic-honesty)
+- [Class Structure](#class-structure)
+	- [Objectives](#objectives)
+	- [Intro](#intro)
+		- [What is programming?](#what-is-programming)
+		- [Why Python?](#why-python)
+		- [Why Django?](#why-django)
+		- [Why JavaScript?](#why-javascript)
+		- [Why Vue?](#why-vue)
+		- [Why Django Rest Framework?](#why-django-rest-framework)
+	- [Course Overview](#course-overview)
+	- [Submitting Lab Solutions](#submitting-lab-solutions)
+	- [Healthy Habits](#healthy-habits)
+	- [Terms](#terms)
+	- [Exercises](#exercises)
+		- [Lectures & Demonstrations](#lectures--demonstrations)
+		- [Labs](#labs)
+		- [Pair, Group, & Mob Programming](#pair-group--mob-programming)
+		- [Student Presentations](#student-presentations)
+			- [Capstone Presentation](#capstone-presentation)
+	- [Rough Timeline](#rough-timeline)
+	- [Code of Conduct](#code-of-conduct)
+	- [Academic Honesty](#academic-honesty)
+	- [Logistics](#logistics)
+		- [Schedule](#schedule)
+		- [Holidays](#holidays)
+		- [Contact](#contact)
+		- [Zoom](#zoom)
+		- [Slack](#slack)
+		- [Github](#github)
+	- [Roles & Responsibilities](#roles--responsibilities)
+		- [Minimum Criteria to Graduate](#minimum-criteria-to-graduate)
+		- [Attendance & Attention](#attendance--attention)
 
 
 ## Objectives
@@ -50,6 +64,24 @@ A program is a series of instructions given to a computer which perform operatio
 - It has a great community, active development
 - It enables the quick development of web applications
 - Web dev is very popular and lucrative
+
+### Why JavaScript?
+
+- It has a great community, active development
+- It has a wide variety of libraries and resources
+- It is the language of the web browser
+
+### Why Vue?
+
+- It has a great community, active development
+- It enables the quick development of complex interfaces and interactivity
+- It is beginner friendly
+- It has excellent documentation
+
+### Why Django Rest Framework?
+
+- It has a great community, active development
+- It enables the quick development of web APIs
 
 ## Course Overview
 
@@ -118,6 +150,7 @@ Students will submit lab solutions by using `commit` and `push` to a repository 
   - Materialize (CSS)
   - Requests (Python)
   - Vue.js (JavaScript)
+  - Django Rest Framework (Python)
 - Languages
   - CSS
   - HTML
@@ -220,10 +253,10 @@ For your capstone presentation, you should plan out what features of your projec
 
 ## Rough Timeline
 
-- Week 1, 2, 3: Python
-- Week 4: HTML + CSS
-- Week 5, 6, 7: JavaScript
-- Week 8, 9, 10, 11: Django
+- Week 1, 2, 3, 4: Python
+- Week 5, 6: HTML + CSS + Flask
+- Week 7, 8, 9: JavaScript + Vue
+- Week 9, 10, 11: Django + Django Rest Framework
 - Week 12, 13, 14: Capstone
 
 ## Code of Conduct
@@ -250,3 +283,54 @@ At PDX Code Guild we seek to create an environment conducive to personal and pro
 Do not look at the solution or other students' solutions until you've finished the lab yourself. Do not copy other student's code. Do not copy code off the internet unless it's a small amount and you know exactly what it means. Do not try and complete a lab by googling a tutorial. You're only inhibiting your own learning by doing so. Cheating is also a violation of our code of conduct and can result in expulsion.
 
 You are encouraged to use resources (docs, online, books, each other) to research solutions. If you copy code from the internet or a book, you must understand what it means and how it works. If you're not sure, look up the function in the docs, try running it with a variety of inputs, and try tweaking the syntax, throw in print statements to print the values of variables at different times, etc. You also cannot use a single function which performs the entirety of the solution for you. The early labs are designed to practice string and list operations, using a function that does it all defeats the purpose.
+
+## Logistics
+
+### Schedule
+
+The 14 week course is 70 days long, weekdays 9:30 AM to 4:30 PM, with an hour for lunch. The 16 week course is 80 days, weekdays 6 PM to 9:30 PM. We'll take 10 minute breaks every hour-and-a-half.
+
+### Holidays
+
+PDX Code Guild doesn't hold class sessions on the following holidays. Holidays don't affect the length of the course; the end date is pushed back.
+
+* Independence Day
+* Labor Day
+* Thanksgiving Weekend
+* Christmas Weekend
+* New Years Day
+* Memorial Day
+
+### Contact
+
+You are welcome to email me at any time: [CHANGEME](mailto:CHANGEME). We will also have a channel on the [PDX Code Guild Slack](https://portlandcodeguild.slack.com/).
+
+### Zoom
+
+We will be using Zoom for holding class. This is the closest we can get to an in person classroom with lectures, whiteboards, breakouts, etc. You will be given the link for our daily Zoom meetings that make up class.
+
+### Slack
+
+Slack is a chat application. THis is how I will send out quick updates and how you can ask other students and instructors questions. Keep in mind Slack is ephemeral, and messages will disappear after about two weeks.
+
+### Github
+
+That's this! Your main source of information, resources, and assignments for this class.
+
+## Roles & Responsibilities
+
+### Minimum Criteria to Graduate
+
+- all lab solutions- organized, tested, commented
+- a capstone which demonstrates proficiency in each of the five areas we cover
+- not absent more than 10% of the class days (7 for the 14-week class, 8 for the 16-week class)
+
+### Attendance & Attention
+
+We try to make room for people's personal lives. We're all adults, it's up to your judgement whether a reason for missing class is justified. However, if you're not present, you won't be engaged and won't be learning. You can quickly fall behind if you miss several classes in succession. The course moves fast, and each topic builds upon the last.
+
+Students can miss 10% of the days at most (7 for the 14-week class, 8 for the 16-week class). The only exceptions are up to five days of excused absence already arranged before the course starts. You can make up classes by coming in additional hours outside of class. You can also make up absences by completing the assignments on your own, and reviewing those solutions with me.
+
+All participants should arrive on time. The start of the class is the easiest time to make announcements and give lectures because everyone's synchronized. If you arrive late, I have to remember what I said before you came in and make sure to tell you it, and inevitably something gets lost in the shuffle. It's also disruptive, and waiting for late people punishes people who came on time. **Arriving more than 15 minutes late 3 times counts as an absence.**
+
+All participants should remain focused on their work while here, or at least not distract others. Let's maximize the return on the time we're all investing.

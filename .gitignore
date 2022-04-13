@@ -1,11 +1,7 @@
 
 junk
 
-
-*.jpg
-*.png
-*.jpeg
-
+.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

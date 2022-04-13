@@ -2,26 +2,28 @@
 # Git
 
 
-- [1 Overview](#1-overview)
-- [1.1 VCS & Git](#11-vcs--git)
-  - [1.2 Links](#12-links)
-  - [1.3 Terms](#13-terms)
-- [2 Configuration and Status](#2-configuration-and-status)
-  - [2.1 .gitignore](#21-gitignore)
-  - [2.2 Setting Credentials](#22-setting-credentials)
-  - [2.3 Set Connections to Remote Repositories](#23-set-connections-to-remote-repositories)
-  - [2.4 Getting Information](#24-getting-information)
-- [3 Basics](#3-basics)
-  - [3.1 Creating a Repository](#31-creating-a-repository)
-- [3.2 Staging and Committing](#32-staging-and-committing)
-  - [3.3 Pushing and Pulling](#33-pushing-and-pulling)
-- [4 Undoing](#4-undoing)
-  - [4.1 Checkout](#41-checkout)
-  - [4.2 Rm](#42-rm)
-  - [4.4 Revert](#44-revert)
-  - [4.3 Reset](#43-reset)
-- [5 Branching and Merging](#5-branching-and-merging)
-- [6 Examples](#6-examples)
+- [Git](#git)
+	- [1 Overview](#1-overview)
+	- [1.1 VCS & Git](#11-vcs--git)
+		- [1.2 Links](#12-links)
+		- [1.3 Terms](#13-terms)
+	- [2 Configuration and Status](#2-configuration-and-status)
+		- [2.1 .gitignore](#21-gitignore)
+		- [2.2 Setting Credentials](#22-setting-credentials)
+		- [2.3 Set Connections to Remote Repositories](#23-set-connections-to-remote-repositories)
+		- [2.4 Getting Information](#24-getting-information)
+	- [3 Basics](#3-basics)
+		- [3.1 Creating a Repository](#31-creating-a-repository)
+	- [3.2 Staging and Committing](#32-staging-and-committing)
+		- [3.3 Pushing and Pulling](#33-pushing-and-pulling)
+	- [4 Undoing](#4-undoing)
+		- [4.1 Checkout](#41-checkout)
+		- [4.2 Rm](#42-rm)
+		- [4.4 Revert](#44-revert)
+		- [4.3 Reset](#43-reset)
+	- [5 Branching and Merging](#5-branching-and-merging)
+	- [6 Examples](#6-examples)
+	- [Exercise](#exercise)
 
 
 ## 1 Overview
@@ -269,3 +271,14 @@ git add file1.md
 git commit -m "edit file1"
 git push
 ```
+
+## Exercise
+
+Create your own folder in the `code` folder of our class repository. You'll use this folder to post your labs as you work on them. For now, you don't have anything to post, so you'll have to create a `.gitkeep` file. For this exercise, practice using the command line. You may not use Windows Explorer, the Finder, VS Code, or any other desktop programs.
+
+1. Clone the class repo to your own project folder on your computer.
+2. Use the command line to create your own folder in the `code` folder. Name it your first name, all lower case.
+3. Add a `.gitkeep` file inside your new folder so that Git can track it.
+4. Add, commit, and push your changes to the class repo on GitHub. Remember that Git will make you `pull` changes from the server before you can `push` your own changes up to the server.
+
+You'll have completed this exercise when you have a folder for yourself on the class repo on GitHub. This folder is where you will write, store, and push your lab files as you work on them. 

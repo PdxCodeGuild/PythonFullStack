@@ -72,7 +72,7 @@ from x import * #Imports everything from file
 x = __import__('X')
 ```
 
-### Main: `\_\_name__`
+### Main: `__name__`
 
 When a module is run directly or imported, a variable `__name__` is passed into it. If the module is run directly, `__name__` will be `'__main__'`, otherwise it will be the module name itself. This allows you to execute code only when a module is run directly, and not when it's imported into another file, which is useful for having test code inside the module.
 
