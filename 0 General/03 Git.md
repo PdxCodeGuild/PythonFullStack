@@ -149,7 +149,8 @@ Git has a staging area for files to be added to before they're committed to the 
 
 
 - `git add <path>` adds a file or folder of files to staging
-- `git add .` adds all updated files to staging
+- `git add .` adds all files in the current working directory to staging
+- `git add -A` adds all updated files to staging
 - `git commit` commits staged changes to the history and opens a text editor for a commit message
 - `git commit -a` add and commit in one line
 - `git commit -m "<commit_message>"` commit with the given message
