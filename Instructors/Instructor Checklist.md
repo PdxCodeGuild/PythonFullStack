@@ -91,10 +91,11 @@ Staff files and class records should be kept on Google Drive. This includes atte
 - Intro to Zoom
 - Instructor personal intro
 - Student intros:
-  1. Name
+  1. Name/pronouns
   2. Personal and/or tech background
   3. Why are you here?
   4. What do you want to get out of this course?
+  5. Where are you?
 - Code of conduct/inclusion
 - Go over objectives
 - Go over curriculum
